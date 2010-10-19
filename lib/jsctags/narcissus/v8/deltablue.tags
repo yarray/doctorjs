@@ -4,79 +4,294 @@
 !_TAG_PROGRAM_NAME	jsctags	//
 !_TAG_PROGRAM_URL	http://github.com/pcwalton/jsctags	/GitHub repository/
 !_TAG_PROGRAM_VERSION	0.1	//
+BACKWARD	deltablue.js	/^\/\/ Copyright 2008 Google Inc. All Rights Reserved.$/;"	v	lineno:1	namespace:Direction	type:number
 BinaryConstraint	deltablue.js	/^function BinaryConstraint(var1, var2, strength) {$/;"	f	lineno:341	type:void function(<null | Variable>, <null | Variable>, Strength)
 Constraint	deltablue.js	/^function Constraint(strength) {$/;"	f	lineno:153	type:void function(Strength)
 Direction	deltablue.js	/^var Direction = new Object();$/;"	v	lineno:332	type:Object
 EditConstraint	deltablue.js	/^function EditConstraint(v, str) {$/;"	f	lineno:311	type:EditConstraint function(<null | Variable>, Strength)
 EqualityConstraint	deltablue.js	/^function EqualityConstraint(var1, var2, strength) {$/;"	f	lineno:514	type:EqualityConstraint function(null, Variable, Strength)
-Inheriter	deltablue.js	/^  function Inheriter() { }$/;"	f	lineno:50	type:Inheriter function()
+FORWARD	deltablue.js	/^\/\/ Copyright 2008 Google Inc. All Rights Reserved.$/;"	v	lineno:1	namespace:Direction	type:number
+NONE	deltablue.js	/^\/\/ Copyright 2008 Google Inc. All Rights Reserved.$/;"	v	lineno:1	namespace:Direction	type:number
+NORMAL	deltablue.js	/^\/\/ Copyright 2008 Google Inc. All Rights Reserved.$/;"	v	lineno:1	namespace:Strength	type:Strength
+NORMAL	deltablue.js	/^\/\/ Copyright 2008 Google Inc. All Rights Reserved.$/;"	v	lineno:1	namespace:Strength.prototype.constructor	type:Strength
 OrderedCollection	deltablue.js	/^function OrderedCollection() {$/;"	f	lineno:56	type:OrderedCollection function()
+PREFERRED	deltablue.js	/^\/\/ Copyright 2008 Google Inc. All Rights Reserved.$/;"	v	lineno:1	namespace:Strength	type:Strength
+PREFERRED	deltablue.js	/^\/\/ Copyright 2008 Google Inc. All Rights Reserved.$/;"	v	lineno:1	namespace:Strength.prototype.constructor	type:Strength
 Plan	deltablue.js	/^function Plan() {$/;"	f	lineno:757	type:Plan function()
 Planner	deltablue.js	/^function Planner() {$/;"	f	lineno:570	type:Planner function()
+REQUIRED	deltablue.js	/^\/\/ Copyright 2008 Google Inc. All Rights Reserved.$/;"	v	lineno:1	namespace:Strength	type:Strength
+REQUIRED	deltablue.js	/^\/\/ Copyright 2008 Google Inc. All Rights Reserved.$/;"	v	lineno:1	namespace:Strength.prototype.constructor	type:Strength
+STONG_PREFERRED	deltablue.js	/^\/\/ Copyright 2008 Google Inc. All Rights Reserved.$/;"	v	lineno:1	namespace:Strength	type:Strength
+STONG_PREFERRED	deltablue.js	/^\/\/ Copyright 2008 Google Inc. All Rights Reserved.$/;"	v	lineno:1	namespace:Strength.prototype.constructor	type:Strength
+STRONG_DEFAULT	deltablue.js	/^\/\/ Copyright 2008 Google Inc. All Rights Reserved.$/;"	v	lineno:1	namespace:Strength	type:Strength
+STRONG_DEFAULT	deltablue.js	/^\/\/ Copyright 2008 Google Inc. All Rights Reserved.$/;"	v	lineno:1	namespace:Strength.prototype.constructor	type:Strength
 ScaleConstraint	deltablue.js	/^function ScaleConstraint(src, scale, offset, dest, strength) {$/;"	f	lineno:455	type:ScaleConstraint function(<null | Variable>, Variable, Variable, <null | Variable>, Strength)
 StayConstraint	deltablue.js	/^function StayConstraint(v, str) {$/;"	f	lineno:293	type:StayConstraint function(<null | Variable>, Strength)
 Strength	deltablue.js	/^function Strength(strengthValue, name) {$/;"	f	lineno:101	type:Strength function(number, string)
 UnaryConstraint	deltablue.js	/^function UnaryConstraint(v, strength) {$/;"	f	lineno:212	type:void function(<null | Variable>, Strength)
 Variable	deltablue.js	/^function Variable(name, initialValue) {$/;"	f	lineno:537	type:Variable function(string, <number | undefined>)
-add	deltablue.js	/^OrderedCollection.prototype.add = function (elm) {$/;"	f	lineno:60	type:void function(<undefined | null | Variable | Constraint>)
-addConstraint	deltablue.js	/^Constraint.prototype.addConstraint = function () {$/;"	f	lineno:160	type:void function()
-addConstraint	deltablue.js	/^Plan.prototype.addConstraint = function (c) {$/;"	f	lineno:761	type:void function(<undefined | null | Variable | Constraint>)
-addConstraint	deltablue.js	/^Variable.prototype.addConstraint = function (c) {$/;"	f	lineno:551	type:void function(Constraint)
-addConstraintsConsumingTo	deltablue.js	/^Planner.prototype.addConstraintsConsumingTo = function (v, coll) {$/;"	f	lineno:738	type:void function(<undefined | null | Variable>, OrderedCollection)
-addPropagate	deltablue.js	/^Planner.prototype.addPropagate = function (c, mark) {$/;"	f	lineno:691	type:boolean function(<undefined | null | Variable | Constraint>, number)
-addToGraph	deltablue.js	/^BinaryConstraint.prototype.addToGraph = function () {$/;"	f	lineno:381	type:void function()
-addToGraph	deltablue.js	/^ScaleConstraint.prototype.addToGraph = function () {$/;"	f	lineno:467	type:void function()
-addToGraph	deltablue.js	/^UnaryConstraint.prototype.addToGraph = function () {$/;"	f	lineno:224	type:void function()
-at	deltablue.js	/^OrderedCollection.prototype.at = function (index) {$/;"	f	lineno:64	type:<undefined | null | Variable | Constraint> function(number)
+WEAKEST	deltablue.js	/^\/\/ Copyright 2008 Google Inc. All Rights Reserved.$/;"	v	lineno:1	namespace:Strength	type:Strength
+WEAKEST	deltablue.js	/^\/\/ Copyright 2008 Google Inc. All Rights Reserved.$/;"	v	lineno:1	namespace:Strength.prototype.constructor	type:Strength
+WEAK_DEFAULT	deltablue.js	/^\/\/ Copyright 2008 Google Inc. All Rights Reserved.$/;"	v	lineno:1	namespace:Strength	type:Strength
+WEAK_DEFAULT	deltablue.js	/^\/\/ Copyright 2008 Google Inc. All Rights Reserved.$/;"	v	lineno:1	namespace:Strength.prototype.constructor	type:Strength
+add	deltablue.js	/^OrderedCollection.prototype.add = function (elm) {$/;"	f	lineno:60	namespace:OrderedCollection.prototype	type:void function(<undefined | null | Variable | Constraint>)
+addConstraint	deltablue.js	/^Constraint.prototype.addConstraint = function () {$/;"	f	lineno:160	namespace:BinaryConstraint.superConstructor.prototype	type:void function()
+addConstraint	deltablue.js	/^Constraint.prototype.addConstraint = function () {$/;"	f	lineno:160	namespace:Constraint.prototype	type:void function()
+addConstraint	deltablue.js	/^Constraint.prototype.addConstraint = function () {$/;"	f	lineno:160	namespace:EditConstraint.superConstructor.superConstructor.prototype	type:void function()
+addConstraint	deltablue.js	/^Constraint.prototype.addConstraint = function () {$/;"	f	lineno:160	namespace:EqualityConstraint.superConstructor.superConstructor.prototype	type:void function()
+addConstraint	deltablue.js	/^Constraint.prototype.addConstraint = function () {$/;"	f	lineno:160	namespace:ScaleConstraint.superConstructor.superConstructor.prototype	type:void function()
+addConstraint	deltablue.js	/^Constraint.prototype.addConstraint = function () {$/;"	f	lineno:160	namespace:StayConstraint.superConstructor.superConstructor.prototype	type:void function()
+addConstraint	deltablue.js	/^Constraint.prototype.addConstraint = function () {$/;"	f	lineno:160	namespace:UnaryConstraint.superConstructor.prototype	type:void function()
+addConstraint	deltablue.js	/^Plan.prototype.addConstraint = function (c) {$/;"	f	lineno:761	namespace:Plan.prototype	type:void function(<undefined | null | Variable | Constraint>)
+addConstraint	deltablue.js	/^Variable.prototype.addConstraint = function (c) {$/;"	f	lineno:551	namespace:Variable.prototype	type:void function(Constraint)
+addConstraintsConsumingTo	deltablue.js	/^Planner.prototype.addConstraintsConsumingTo = function (v, coll) {$/;"	f	lineno:738	namespace:Planner.prototype	type:void function(<undefined | null | Variable>, OrderedCollection)
+addPropagate	deltablue.js	/^Planner.prototype.addPropagate = function (c, mark) {$/;"	f	lineno:691	namespace:Planner.prototype	type:boolean function(<undefined | null | Variable | Constraint>, number)
+addToGraph	deltablue.js	/^ScaleConstraint.prototype.addToGraph = function () {$/;"	f	lineno:467	namespace:BinaryConstraint.prototype	type:void function()
+addToGraph	deltablue.js	/^ScaleConstraint.prototype.addToGraph = function () {$/;"	f	lineno:467	namespace:EditConstraint.prototype	type:void function()
+addToGraph	deltablue.js	/^ScaleConstraint.prototype.addToGraph = function () {$/;"	f	lineno:467	namespace:EditConstraint.superConstructor.prototype	type:void function()
+addToGraph	deltablue.js	/^ScaleConstraint.prototype.addToGraph = function () {$/;"	f	lineno:467	namespace:EqualityConstraint.prototype	type:void function()
+addToGraph	deltablue.js	/^ScaleConstraint.prototype.addToGraph = function () {$/;"	f	lineno:467	namespace:EqualityConstraint.superConstructor.prototype	type:void function()
+addToGraph	deltablue.js	/^ScaleConstraint.prototype.addToGraph = function () {$/;"	f	lineno:467	namespace:ScaleConstraint.prototype	type:void function()
+addToGraph	deltablue.js	/^ScaleConstraint.prototype.addToGraph = function () {$/;"	f	lineno:467	namespace:ScaleConstraint.superConstructor.prototype	type:void function()
+addToGraph	deltablue.js	/^ScaleConstraint.prototype.addToGraph = function () {$/;"	f	lineno:467	namespace:StayConstraint.prototype	type:void function()
+addToGraph	deltablue.js	/^ScaleConstraint.prototype.addToGraph = function () {$/;"	f	lineno:467	namespace:StayConstraint.superConstructor.prototype	type:void function()
+addToGraph	deltablue.js	/^ScaleConstraint.prototype.addToGraph = function () {$/;"	f	lineno:467	namespace:UnaryConstraint.prototype	type:void function()
+at	deltablue.js	/^OrderedCollection.prototype.at = function (index) {$/;"	f	lineno:64	namespace:OrderedCollection.prototype	type:<undefined | null | Variable | Constraint> function(number)
 chainTest	deltablue.js	/^function chainTest(n) {$/;"	f	lineno:797	type:void function(number)
 change	deltablue.js	/^function change(v, newValue) {$/;"	f	lineno:862	type:void function(<null | Variable>, number)
-chooseMethod	deltablue.js	/^BinaryConstraint.prototype.chooseMethod = function (mark) {$/;"	f	lineno:356	type:void function(number)
-chooseMethod	deltablue.js	/^UnaryConstraint.prototype.chooseMethod = function (mark) {$/;"	f	lineno:233	type:void function(number)
-constraintAt	deltablue.js	/^Plan.prototype.constraintAt = function (index) {$/;"	f	lineno:769	type:<undefined | null | Variable | Constraint> function(number)
+chooseMethod	deltablue.js	/^BinaryConstraint.prototype.chooseMethod = function (mark) {$/;"	f	lineno:356	namespace:BinaryConstraint.prototype	type:void function(number)
+chooseMethod	deltablue.js	/^BinaryConstraint.prototype.chooseMethod = function (mark) {$/;"	f	lineno:356	namespace:EditConstraint.prototype	type:void function(number)
+chooseMethod	deltablue.js	/^BinaryConstraint.prototype.chooseMethod = function (mark) {$/;"	f	lineno:356	namespace:EditConstraint.superConstructor.prototype	type:void function(number)
+chooseMethod	deltablue.js	/^BinaryConstraint.prototype.chooseMethod = function (mark) {$/;"	f	lineno:356	namespace:EqualityConstraint.prototype	type:void function(number)
+chooseMethod	deltablue.js	/^BinaryConstraint.prototype.chooseMethod = function (mark) {$/;"	f	lineno:356	namespace:EqualityConstraint.superConstructor.prototype	type:void function(number)
+chooseMethod	deltablue.js	/^BinaryConstraint.prototype.chooseMethod = function (mark) {$/;"	f	lineno:356	namespace:ScaleConstraint.prototype	type:void function(number)
+chooseMethod	deltablue.js	/^BinaryConstraint.prototype.chooseMethod = function (mark) {$/;"	f	lineno:356	namespace:ScaleConstraint.superConstructor.prototype	type:void function(number)
+chooseMethod	deltablue.js	/^BinaryConstraint.prototype.chooseMethod = function (mark) {$/;"	f	lineno:356	namespace:StayConstraint.prototype	type:void function(number)
+chooseMethod	deltablue.js	/^BinaryConstraint.prototype.chooseMethod = function (mark) {$/;"	f	lineno:356	namespace:StayConstraint.superConstructor.prototype	type:void function(number)
+chooseMethod	deltablue.js	/^BinaryConstraint.prototype.chooseMethod = function (mark) {$/;"	f	lineno:356	namespace:UnaryConstraint.prototype	type:void function(number)
+constraintAt	deltablue.js	/^Plan.prototype.constraintAt = function (index) {$/;"	f	lineno:769	namespace:Plan.prototype	type:<undefined | null | Variable | Constraint> function(number)
+constructor	deltablue.js	/^function Constraint(strength) {$/;"	f	lineno:153	namespace:BinaryConstraint.superConstructor.prototype	type:void function(Strength)
+constructor	deltablue.js	/^function Constraint(strength) {$/;"	f	lineno:153	namespace:Constraint.prototype	type:void function(Strength)
+constructor	deltablue.js	/^function Constraint(strength) {$/;"	f	lineno:153	namespace:EditConstraint.superConstructor.superConstructor.prototype	type:void function(Strength)
+constructor	deltablue.js	/^function Constraint(strength) {$/;"	f	lineno:153	namespace:EqualityConstraint.superConstructor.superConstructor.prototype	type:void function(Strength)
+constructor	deltablue.js	/^function Constraint(strength) {$/;"	f	lineno:153	namespace:ScaleConstraint.superConstructor.superConstructor.prototype	type:void function(Strength)
+constructor	deltablue.js	/^function Constraint(strength) {$/;"	f	lineno:153	namespace:StayConstraint.superConstructor.superConstructor.prototype	type:void function(Strength)
+constructor	deltablue.js	/^function Constraint(strength) {$/;"	f	lineno:153	namespace:UnaryConstraint.superConstructor.prototype	type:void function(Strength)
+constructor	deltablue.js	/^function OrderedCollection() {$/;"	f	lineno:56	namespace:OrderedCollection.prototype	type:OrderedCollection function()
+constructor	deltablue.js	/^function Plan() {$/;"	f	lineno:757	namespace:Plan.prototype	type:Plan function()
+constructor	deltablue.js	/^function Planner() {$/;"	f	lineno:570	namespace:Planner.prototype	type:Planner function()
+constructor	deltablue.js	/^function Strength(strengthValue, name) {$/;"	f	lineno:101	namespace:Strength.prototype	type:Strength function(number, string)
+constructor	deltablue.js	/^function Variable(name, initialValue) {$/;"	f	lineno:537	namespace:Variable.prototype	type:Variable function(string, <number | undefined>)
+currentMark	deltablue.js	/^\/\/ Copyright 2008 Google Inc. All Rights Reserved.$/;"	v	lineno:1	namespace:planner	type:number
+currentMark	deltablue.js	/^\/\/ Copyright 2008 Google Inc. All Rights Reserved.$/;"	v	lineno:1	namespace:planner	type:number
 deltaBlue	deltablue.js	/^function deltaBlue() {$/;"	f	lineno:877	type:void function()
-destroyConstraint	deltablue.js	/^Constraint.prototype.destroyConstraint = function () {$/;"	f	lineno:190	type:void function()
-execute	deltablue.js	/^EditConstraint.prototype.execute = function () {$/;"	f	lineno:324	type:void function()
-execute	deltablue.js	/^EqualityConstraint.prototype.execute = function () {$/;"	f	lineno:523	type:void function()
-execute	deltablue.js	/^Plan.prototype.execute = function () {$/;"	f	lineno:773	type:void function()
-execute	deltablue.js	/^ScaleConstraint.prototype.execute = function () {$/;"	f	lineno:487	type:void function()
-execute	deltablue.js	/^StayConstraint.prototype.execute = function () {$/;"	f	lineno:299	type:void function()
-extractPlanFromConstraints	deltablue.js	/^Planner.prototype.extractPlanFromConstraints = function (constraints) {$/;"	f	lineno:667	type:Plan function(OrderedCollection)
-incrementalAdd	deltablue.js	/^Planner.prototype.incrementalAdd = function (c) {$/;"	f	lineno:588	type:void function(<undefined | null | Variable | Constraint>)
-incrementalRemove	deltablue.js	/^Planner.prototype.incrementalRemove = function (c) {$/;"	f	lineno:606	type:void function(<undefined | null | Variable | Constraint>)
-inherits	deltablue.js	/^Object.prototype.inherits = function (shuper) {$/;"	f	lineno:49	type:void function(<void function(Strength) | void function(<null | Variable>, Strength) | void function(<null | Variable>, <null | Variable>, Strength)>)
-input	deltablue.js	/^BinaryConstraint.prototype.input = function () {$/;"	f	lineno:404	type:<undefined | null | Variable> function()
-inputsKnown	deltablue.js	/^BinaryConstraint.prototype.inputsKnown = function (mark) {$/;"	f	lineno:434	type:boolean function(number)
-inputsKnown	deltablue.js	/^UnaryConstraint.prototype.inputsKnown = function () {$/;"	f	lineno:274	type:boolean function()
-isInput	deltablue.js	/^Constraint.prototype.isInput = function () {$/;"	f	lineno:200	type:boolean function()
-isInput	deltablue.js	/^EditConstraint.prototype.isInput = function () {$/;"	f	lineno:320	type:boolean function()
-isSatisfied	deltablue.js	/^BinaryConstraint.prototype.isSatisfied = function () {$/;"	f	lineno:390	type:boolean function()
-isSatisfied	deltablue.js	/^UnaryConstraint.prototype.isSatisfied = function () {$/;"	f	lineno:241	type:<boolean | undefined> function()
-makePlan	deltablue.js	/^Planner.prototype.makePlan = function (sources) {$/;"	f	lineno:648	type:Plan function(OrderedCollection)
-markInputs	deltablue.js	/^BinaryConstraint.prototype.markInputs = function (mark) {$/;"	f	lineno:397	type:void function(number)
-markInputs	deltablue.js	/^ScaleConstraint.prototype.markInputs = function (mark) {$/;"	f	lineno:479	type:void function(number)
-markInputs	deltablue.js	/^UnaryConstraint.prototype.markInputs = function (mark) {$/;"	f	lineno:245	type:void function(number)
-markUnsatisfied	deltablue.js	/^BinaryConstraint.prototype.markUnsatisfied = function () {$/;"	f	lineno:430	type:void function()
-markUnsatisfied	deltablue.js	/^UnaryConstraint.prototype.markUnsatisfied = function () {$/;"	f	lineno:270	type:void function()
-newMark	deltablue.js	/^Planner.prototype.newMark = function () {$/;"	f	lineno:625	type:number function()
-nextWeaker	deltablue.js	/^Strength.prototype.nextWeaker = function () {$/;"	f	lineno:122	type:Strength function()
-output	deltablue.js	/^BinaryConstraint.prototype.output = function () {$/;"	f	lineno:411	type:<undefined | null | Variable> function()
-output	deltablue.js	/^UnaryConstraint.prototype.output = function () {$/;"	f	lineno:252	type:<undefined | null | Variable> function()
+destroyConstraint	deltablue.js	/^Constraint.prototype.destroyConstraint = function () {$/;"	f	lineno:190	namespace:BinaryConstraint.superConstructor.prototype	type:void function()
+destroyConstraint	deltablue.js	/^Constraint.prototype.destroyConstraint = function () {$/;"	f	lineno:190	namespace:Constraint.prototype	type:void function()
+destroyConstraint	deltablue.js	/^Constraint.prototype.destroyConstraint = function () {$/;"	f	lineno:190	namespace:EditConstraint.superConstructor.superConstructor.prototype	type:void function()
+destroyConstraint	deltablue.js	/^Constraint.prototype.destroyConstraint = function () {$/;"	f	lineno:190	namespace:EqualityConstraint.superConstructor.superConstructor.prototype	type:void function()
+destroyConstraint	deltablue.js	/^Constraint.prototype.destroyConstraint = function () {$/;"	f	lineno:190	namespace:ScaleConstraint.superConstructor.superConstructor.prototype	type:void function()
+destroyConstraint	deltablue.js	/^Constraint.prototype.destroyConstraint = function () {$/;"	f	lineno:190	namespace:StayConstraint.superConstructor.superConstructor.prototype	type:void function()
+destroyConstraint	deltablue.js	/^Constraint.prototype.destroyConstraint = function () {$/;"	f	lineno:190	namespace:UnaryConstraint.superConstructor.prototype	type:void function()
+execute	deltablue.js	/^EqualityConstraint.prototype.execute = function () {$/;"	f	lineno:523	namespace:BinaryConstraint.prototype	type:void function()
+execute	deltablue.js	/^EqualityConstraint.prototype.execute = function () {$/;"	f	lineno:523	namespace:EditConstraint.prototype	type:void function()
+execute	deltablue.js	/^EqualityConstraint.prototype.execute = function () {$/;"	f	lineno:523	namespace:EditConstraint.superConstructor.prototype	type:void function()
+execute	deltablue.js	/^EqualityConstraint.prototype.execute = function () {$/;"	f	lineno:523	namespace:EqualityConstraint.prototype	type:void function()
+execute	deltablue.js	/^EqualityConstraint.prototype.execute = function () {$/;"	f	lineno:523	namespace:EqualityConstraint.superConstructor.prototype	type:void function()
+execute	deltablue.js	/^EqualityConstraint.prototype.execute = function () {$/;"	f	lineno:523	namespace:ScaleConstraint.prototype	type:void function()
+execute	deltablue.js	/^EqualityConstraint.prototype.execute = function () {$/;"	f	lineno:523	namespace:ScaleConstraint.superConstructor.prototype	type:void function()
+execute	deltablue.js	/^EqualityConstraint.prototype.execute = function () {$/;"	f	lineno:523	namespace:StayConstraint.prototype	type:void function()
+execute	deltablue.js	/^EqualityConstraint.prototype.execute = function () {$/;"	f	lineno:523	namespace:StayConstraint.superConstructor.prototype	type:void function()
+execute	deltablue.js	/^EqualityConstraint.prototype.execute = function () {$/;"	f	lineno:523	namespace:UnaryConstraint.prototype	type:void function()
+execute	deltablue.js	/^Plan.prototype.execute = function () {$/;"	f	lineno:773	namespace:Plan.prototype	type:void function()
+extractPlanFromConstraints	deltablue.js	/^Planner.prototype.extractPlanFromConstraints = function (constraints) {$/;"	f	lineno:667	namespace:Planner.prototype	type:Plan function(OrderedCollection)
+incrementalAdd	deltablue.js	/^Planner.prototype.incrementalAdd = function (c) {$/;"	f	lineno:588	namespace:Planner.prototype	type:void function(<undefined | null | Variable | Constraint>)
+incrementalRemove	deltablue.js	/^Planner.prototype.incrementalRemove = function (c) {$/;"	f	lineno:606	namespace:Planner.prototype	type:void function(<undefined | null | Variable | Constraint>)
+input	deltablue.js	/^BinaryConstraint.prototype.input = function () {$/;"	f	lineno:404	namespace:BinaryConstraint.prototype	type:<undefined | null | Variable> function()
+input	deltablue.js	/^BinaryConstraint.prototype.input = function () {$/;"	f	lineno:404	namespace:EditConstraint.prototype	type:<undefined | null | Variable> function()
+input	deltablue.js	/^BinaryConstraint.prototype.input = function () {$/;"	f	lineno:404	namespace:EditConstraint.superConstructor.prototype	type:<undefined | null | Variable> function()
+input	deltablue.js	/^BinaryConstraint.prototype.input = function () {$/;"	f	lineno:404	namespace:EqualityConstraint.prototype	type:<undefined | null | Variable> function()
+input	deltablue.js	/^BinaryConstraint.prototype.input = function () {$/;"	f	lineno:404	namespace:EqualityConstraint.superConstructor.prototype	type:<undefined | null | Variable> function()
+input	deltablue.js	/^BinaryConstraint.prototype.input = function () {$/;"	f	lineno:404	namespace:ScaleConstraint.prototype	type:<undefined | null | Variable> function()
+input	deltablue.js	/^BinaryConstraint.prototype.input = function () {$/;"	f	lineno:404	namespace:ScaleConstraint.superConstructor.prototype	type:<undefined | null | Variable> function()
+input	deltablue.js	/^BinaryConstraint.prototype.input = function () {$/;"	f	lineno:404	namespace:StayConstraint.prototype	type:<undefined | null | Variable> function()
+input	deltablue.js	/^BinaryConstraint.prototype.input = function () {$/;"	f	lineno:404	namespace:StayConstraint.superConstructor.prototype	type:<undefined | null | Variable> function()
+input	deltablue.js	/^BinaryConstraint.prototype.input = function () {$/;"	f	lineno:404	namespace:UnaryConstraint.prototype	type:<undefined | null | Variable> function()
+inputsKnown	deltablue.js	/^BinaryConstraint.prototype.inputsKnown = function (mark) {$/;"	v	lineno:434	namespace:BinaryConstraint.prototype	type:<boolean function() | boolean function(number)>
+inputsKnown	deltablue.js	/^BinaryConstraint.prototype.inputsKnown = function (mark) {$/;"	v	lineno:434	namespace:EditConstraint.prototype	type:<boolean function() | boolean function(number)>
+inputsKnown	deltablue.js	/^BinaryConstraint.prototype.inputsKnown = function (mark) {$/;"	v	lineno:434	namespace:EditConstraint.superConstructor.prototype	type:<boolean function() | boolean function(number)>
+inputsKnown	deltablue.js	/^BinaryConstraint.prototype.inputsKnown = function (mark) {$/;"	v	lineno:434	namespace:EqualityConstraint.prototype	type:<boolean function() | boolean function(number)>
+inputsKnown	deltablue.js	/^BinaryConstraint.prototype.inputsKnown = function (mark) {$/;"	v	lineno:434	namespace:EqualityConstraint.superConstructor.prototype	type:<boolean function() | boolean function(number)>
+inputsKnown	deltablue.js	/^BinaryConstraint.prototype.inputsKnown = function (mark) {$/;"	v	lineno:434	namespace:ScaleConstraint.prototype	type:<boolean function() | boolean function(number)>
+inputsKnown	deltablue.js	/^BinaryConstraint.prototype.inputsKnown = function (mark) {$/;"	v	lineno:434	namespace:ScaleConstraint.superConstructor.prototype	type:<boolean function() | boolean function(number)>
+inputsKnown	deltablue.js	/^BinaryConstraint.prototype.inputsKnown = function (mark) {$/;"	v	lineno:434	namespace:StayConstraint.prototype	type:<boolean function() | boolean function(number)>
+inputsKnown	deltablue.js	/^BinaryConstraint.prototype.inputsKnown = function (mark) {$/;"	v	lineno:434	namespace:StayConstraint.superConstructor.prototype	type:<boolean function() | boolean function(number)>
+inputsKnown	deltablue.js	/^BinaryConstraint.prototype.inputsKnown = function (mark) {$/;"	v	lineno:434	namespace:UnaryConstraint.prototype	type:<boolean function() | boolean function(number)>
+isInput	deltablue.js	/^Constraint.prototype.isInput = function () {$/;"	f	lineno:200	namespace:BinaryConstraint.superConstructor.prototype	type:function
+isInput	deltablue.js	/^Constraint.prototype.isInput = function () {$/;"	f	lineno:200	namespace:Constraint.prototype	type:function
+isInput	deltablue.js	/^Constraint.prototype.isInput = function () {$/;"	f	lineno:200	namespace:EditConstraint.superConstructor.superConstructor.prototype	type:function
+isInput	deltablue.js	/^Constraint.prototype.isInput = function () {$/;"	f	lineno:200	namespace:EqualityConstraint.superConstructor.superConstructor.prototype	type:function
+isInput	deltablue.js	/^Constraint.prototype.isInput = function () {$/;"	f	lineno:200	namespace:ScaleConstraint.superConstructor.superConstructor.prototype	type:function
+isInput	deltablue.js	/^Constraint.prototype.isInput = function () {$/;"	f	lineno:200	namespace:StayConstraint.superConstructor.superConstructor.prototype	type:function
+isInput	deltablue.js	/^Constraint.prototype.isInput = function () {$/;"	f	lineno:200	namespace:UnaryConstraint.superConstructor.prototype	type:function
+isInput	deltablue.js	/^EditConstraint.prototype.isInput = function () {$/;"	f	lineno:320	namespace:BinaryConstraint.prototype	type:boolean function()
+isInput	deltablue.js	/^EditConstraint.prototype.isInput = function () {$/;"	f	lineno:320	namespace:EditConstraint.prototype	type:boolean function()
+isInput	deltablue.js	/^EditConstraint.prototype.isInput = function () {$/;"	f	lineno:320	namespace:EditConstraint.superConstructor.prototype	type:boolean function()
+isInput	deltablue.js	/^EditConstraint.prototype.isInput = function () {$/;"	f	lineno:320	namespace:EqualityConstraint.prototype	type:boolean function()
+isInput	deltablue.js	/^EditConstraint.prototype.isInput = function () {$/;"	f	lineno:320	namespace:EqualityConstraint.superConstructor.prototype	type:boolean function()
+isInput	deltablue.js	/^EditConstraint.prototype.isInput = function () {$/;"	f	lineno:320	namespace:ScaleConstraint.prototype	type:boolean function()
+isInput	deltablue.js	/^EditConstraint.prototype.isInput = function () {$/;"	f	lineno:320	namespace:ScaleConstraint.superConstructor.prototype	type:boolean function()
+isInput	deltablue.js	/^EditConstraint.prototype.isInput = function () {$/;"	f	lineno:320	namespace:StayConstraint.prototype	type:boolean function()
+isInput	deltablue.js	/^EditConstraint.prototype.isInput = function () {$/;"	f	lineno:320	namespace:StayConstraint.superConstructor.prototype	type:boolean function()
+isInput	deltablue.js	/^EditConstraint.prototype.isInput = function () {$/;"	f	lineno:320	namespace:UnaryConstraint.prototype	type:boolean function()
+isSatisfied	deltablue.js	/^BinaryConstraint.prototype.isSatisfied = function () {$/;"	f	lineno:390	namespace:BinaryConstraint.prototype	type:<<boolean | undefined> function() | boolean function()>
+isSatisfied	deltablue.js	/^BinaryConstraint.prototype.isSatisfied = function () {$/;"	f	lineno:390	namespace:EditConstraint.prototype	type:<<boolean | undefined> function() | boolean function()>
+isSatisfied	deltablue.js	/^BinaryConstraint.prototype.isSatisfied = function () {$/;"	f	lineno:390	namespace:EditConstraint.superConstructor.prototype	type:<<boolean | undefined> function() | boolean function()>
+isSatisfied	deltablue.js	/^BinaryConstraint.prototype.isSatisfied = function () {$/;"	f	lineno:390	namespace:EqualityConstraint.prototype	type:<<boolean | undefined> function() | boolean function()>
+isSatisfied	deltablue.js	/^BinaryConstraint.prototype.isSatisfied = function () {$/;"	f	lineno:390	namespace:EqualityConstraint.superConstructor.prototype	type:<<boolean | undefined> function() | boolean function()>
+isSatisfied	deltablue.js	/^BinaryConstraint.prototype.isSatisfied = function () {$/;"	f	lineno:390	namespace:ScaleConstraint.prototype	type:<<boolean | undefined> function() | boolean function()>
+isSatisfied	deltablue.js	/^BinaryConstraint.prototype.isSatisfied = function () {$/;"	f	lineno:390	namespace:ScaleConstraint.superConstructor.prototype	type:<<boolean | undefined> function() | boolean function()>
+isSatisfied	deltablue.js	/^BinaryConstraint.prototype.isSatisfied = function () {$/;"	f	lineno:390	namespace:StayConstraint.prototype	type:<<boolean | undefined> function() | boolean function()>
+isSatisfied	deltablue.js	/^BinaryConstraint.prototype.isSatisfied = function () {$/;"	f	lineno:390	namespace:StayConstraint.superConstructor.prototype	type:<<boolean | undefined> function() | boolean function()>
+isSatisfied	deltablue.js	/^BinaryConstraint.prototype.isSatisfied = function () {$/;"	f	lineno:390	namespace:UnaryConstraint.prototype	type:<<boolean | undefined> function() | boolean function()>
+makePlan	deltablue.js	/^Planner.prototype.makePlan = function (sources) {$/;"	f	lineno:648	namespace:Planner.prototype	type:Plan function(OrderedCollection)
+markInputs	deltablue.js	/^ScaleConstraint.prototype.markInputs = function (mark) {$/;"	f	lineno:479	namespace:BinaryConstraint.prototype	type:void function(number)
+markInputs	deltablue.js	/^ScaleConstraint.prototype.markInputs = function (mark) {$/;"	f	lineno:479	namespace:EditConstraint.prototype	type:void function(number)
+markInputs	deltablue.js	/^ScaleConstraint.prototype.markInputs = function (mark) {$/;"	f	lineno:479	namespace:EditConstraint.superConstructor.prototype	type:void function(number)
+markInputs	deltablue.js	/^ScaleConstraint.prototype.markInputs = function (mark) {$/;"	f	lineno:479	namespace:EqualityConstraint.prototype	type:void function(number)
+markInputs	deltablue.js	/^ScaleConstraint.prototype.markInputs = function (mark) {$/;"	f	lineno:479	namespace:EqualityConstraint.superConstructor.prototype	type:void function(number)
+markInputs	deltablue.js	/^ScaleConstraint.prototype.markInputs = function (mark) {$/;"	f	lineno:479	namespace:ScaleConstraint.prototype	type:void function(number)
+markInputs	deltablue.js	/^ScaleConstraint.prototype.markInputs = function (mark) {$/;"	f	lineno:479	namespace:ScaleConstraint.superConstructor.prototype	type:void function(number)
+markInputs	deltablue.js	/^ScaleConstraint.prototype.markInputs = function (mark) {$/;"	f	lineno:479	namespace:StayConstraint.prototype	type:void function(number)
+markInputs	deltablue.js	/^ScaleConstraint.prototype.markInputs = function (mark) {$/;"	f	lineno:479	namespace:StayConstraint.superConstructor.prototype	type:void function(number)
+markInputs	deltablue.js	/^ScaleConstraint.prototype.markInputs = function (mark) {$/;"	f	lineno:479	namespace:UnaryConstraint.prototype	type:void function(number)
+markUnsatisfied	deltablue.js	/^BinaryConstraint.prototype.markUnsatisfied = function () {$/;"	f	lineno:430	namespace:BinaryConstraint.prototype	type:void function()
+markUnsatisfied	deltablue.js	/^BinaryConstraint.prototype.markUnsatisfied = function () {$/;"	f	lineno:430	namespace:EditConstraint.prototype	type:void function()
+markUnsatisfied	deltablue.js	/^BinaryConstraint.prototype.markUnsatisfied = function () {$/;"	f	lineno:430	namespace:EditConstraint.superConstructor.prototype	type:void function()
+markUnsatisfied	deltablue.js	/^BinaryConstraint.prototype.markUnsatisfied = function () {$/;"	f	lineno:430	namespace:EqualityConstraint.prototype	type:void function()
+markUnsatisfied	deltablue.js	/^BinaryConstraint.prototype.markUnsatisfied = function () {$/;"	f	lineno:430	namespace:EqualityConstraint.superConstructor.prototype	type:void function()
+markUnsatisfied	deltablue.js	/^BinaryConstraint.prototype.markUnsatisfied = function () {$/;"	f	lineno:430	namespace:ScaleConstraint.prototype	type:void function()
+markUnsatisfied	deltablue.js	/^BinaryConstraint.prototype.markUnsatisfied = function () {$/;"	f	lineno:430	namespace:ScaleConstraint.superConstructor.prototype	type:void function()
+markUnsatisfied	deltablue.js	/^BinaryConstraint.prototype.markUnsatisfied = function () {$/;"	f	lineno:430	namespace:StayConstraint.prototype	type:void function()
+markUnsatisfied	deltablue.js	/^BinaryConstraint.prototype.markUnsatisfied = function () {$/;"	f	lineno:430	namespace:StayConstraint.superConstructor.prototype	type:void function()
+markUnsatisfied	deltablue.js	/^BinaryConstraint.prototype.markUnsatisfied = function () {$/;"	f	lineno:430	namespace:UnaryConstraint.prototype	type:void function()
+name	deltablue.js	/^\/\/ Copyright 2008 Google Inc. All Rights Reserved.$/;"	v	lineno:1	namespace:Strength.NORMAL	type:string
+name	deltablue.js	/^\/\/ Copyright 2008 Google Inc. All Rights Reserved.$/;"	v	lineno:1	namespace:Strength.PREFERRED	type:string
+name	deltablue.js	/^\/\/ Copyright 2008 Google Inc. All Rights Reserved.$/;"	v	lineno:1	namespace:Strength.REQUIRED	type:string
+name	deltablue.js	/^\/\/ Copyright 2008 Google Inc. All Rights Reserved.$/;"	v	lineno:1	namespace:Strength.STONG_PREFERRED	type:string
+name	deltablue.js	/^\/\/ Copyright 2008 Google Inc. All Rights Reserved.$/;"	v	lineno:1	namespace:Strength.STRONG_DEFAULT	type:string
+name	deltablue.js	/^\/\/ Copyright 2008 Google Inc. All Rights Reserved.$/;"	v	lineno:1	namespace:Strength.WEAKEST	type:string
+name	deltablue.js	/^\/\/ Copyright 2008 Google Inc. All Rights Reserved.$/;"	v	lineno:1	namespace:Strength.WEAK_DEFAULT	type:string
+name	deltablue.js	/^\/\/ Copyright 2008 Google Inc. All Rights Reserved.$/;"	v	lineno:1	namespace:Strength.prototype.constructor.NORMAL	type:string
+name	deltablue.js	/^\/\/ Copyright 2008 Google Inc. All Rights Reserved.$/;"	v	lineno:1	namespace:Strength.prototype.constructor.PREFERRED	type:string
+name	deltablue.js	/^\/\/ Copyright 2008 Google Inc. All Rights Reserved.$/;"	v	lineno:1	namespace:Strength.prototype.constructor.REQUIRED	type:string
+name	deltablue.js	/^\/\/ Copyright 2008 Google Inc. All Rights Reserved.$/;"	v	lineno:1	namespace:Strength.prototype.constructor.STONG_PREFERRED	type:string
+name	deltablue.js	/^\/\/ Copyright 2008 Google Inc. All Rights Reserved.$/;"	v	lineno:1	namespace:Strength.prototype.constructor.STRONG_DEFAULT	type:string
+name	deltablue.js	/^\/\/ Copyright 2008 Google Inc. All Rights Reserved.$/;"	v	lineno:1	namespace:Strength.prototype.constructor.WEAKEST	type:string
+name	deltablue.js	/^\/\/ Copyright 2008 Google Inc. All Rights Reserved.$/;"	v	lineno:1	namespace:Strength.prototype.constructor.WEAK_DEFAULT	type:string
+newMark	deltablue.js	/^Planner.prototype.newMark = function () {$/;"	f	lineno:625	namespace:Planner.prototype	type:number function()
+nextWeaker	deltablue.js	/^Strength.prototype.nextWeaker = function () {$/;"	f	lineno:122	namespace:Strength.prototype	type:Strength function()
+output	deltablue.js	/^BinaryConstraint.prototype.output = function () {$/;"	f	lineno:411	namespace:BinaryConstraint.prototype	type:<undefined | null | Variable> function()
+output	deltablue.js	/^BinaryConstraint.prototype.output = function () {$/;"	f	lineno:411	namespace:EditConstraint.prototype	type:<undefined | null | Variable> function()
+output	deltablue.js	/^BinaryConstraint.prototype.output = function () {$/;"	f	lineno:411	namespace:EditConstraint.superConstructor.prototype	type:<undefined | null | Variable> function()
+output	deltablue.js	/^BinaryConstraint.prototype.output = function () {$/;"	f	lineno:411	namespace:EqualityConstraint.prototype	type:<undefined | null | Variable> function()
+output	deltablue.js	/^BinaryConstraint.prototype.output = function () {$/;"	f	lineno:411	namespace:EqualityConstraint.superConstructor.prototype	type:<undefined | null | Variable> function()
+output	deltablue.js	/^BinaryConstraint.prototype.output = function () {$/;"	f	lineno:411	namespace:ScaleConstraint.prototype	type:<undefined | null | Variable> function()
+output	deltablue.js	/^BinaryConstraint.prototype.output = function () {$/;"	f	lineno:411	namespace:ScaleConstraint.superConstructor.prototype	type:<undefined | null | Variable> function()
+output	deltablue.js	/^BinaryConstraint.prototype.output = function () {$/;"	f	lineno:411	namespace:StayConstraint.prototype	type:<undefined | null | Variable> function()
+output	deltablue.js	/^BinaryConstraint.prototype.output = function () {$/;"	f	lineno:411	namespace:StayConstraint.superConstructor.prototype	type:<undefined | null | Variable> function()
+output	deltablue.js	/^BinaryConstraint.prototype.output = function () {$/;"	f	lineno:411	namespace:UnaryConstraint.prototype	type:<undefined | null | Variable> function()
 planner	deltablue.js	/^var planner = null;$/;"	v	lineno:875	type:<null | Planner>
 projectionTest	deltablue.js	/^function projectionTest(n) {$/;"	f	lineno:831	type:void function(number)
-recalculate	deltablue.js	/^BinaryConstraint.prototype.recalculate = function () {$/;"	f	lineno:420	type:void function()
-recalculate	deltablue.js	/^ScaleConstraint.prototype.recalculate = function () {$/;"	f	lineno:500	type:void function()
-recalculate	deltablue.js	/^UnaryConstraint.prototype.recalculate = function () {$/;"	f	lineno:261	type:void function()
-remove	deltablue.js	/^OrderedCollection.prototype.remove = function (elm) {$/;"	f	lineno:76	type:void function(<undefined | null | Variable | Constraint>)
-removeConstraint	deltablue.js	/^Variable.prototype.removeConstraint = function (c) {$/;"	f	lineno:558	type:void function(<undefined | null | Variable | Constraint>)
-removeFirst	deltablue.js	/^OrderedCollection.prototype.removeFirst = function () {$/;"	f	lineno:72	type:<undefined | null | Variable | Constraint> function()
-removeFromGraph	deltablue.js	/^BinaryConstraint.prototype.removeFromGraph = function () {$/;"	f	lineno:439	type:void function()
-removeFromGraph	deltablue.js	/^ScaleConstraint.prototype.removeFromGraph = function () {$/;"	f	lineno:473	type:void function()
-removeFromGraph	deltablue.js	/^UnaryConstraint.prototype.removeFromGraph = function () {$/;"	f	lineno:278	type:void function()
-removePropagateFrom	deltablue.js	/^Planner.prototype.removePropagateFrom = function (out) {$/;"	f	lineno:712	type:OrderedCollection function(<undefined | null | Variable>)
-satisfy	deltablue.js	/^Constraint.prototype.satisfy = function (mark) {$/;"	f	lineno:172	type:<undefined | null | Variable | Constraint> function(number)
-size	deltablue.js	/^OrderedCollection.prototype.size = function () {$/;"	f	lineno:68	type:number function()
-size	deltablue.js	/^Plan.prototype.size = function () {$/;"	f	lineno:765	type:number function()
-stronger	deltablue.js	/^Strength.stronger = function (s1, s2) {$/;"	f	lineno:106	type:boolean function(<undefined | Strength>, <undefined | Strength>)
-strongest	deltablue.js	/^Strength.strongest = function (s1, s2) {$/;"	f	lineno:118	type:any function(any, any)
-weaker	deltablue.js	/^Strength.weaker = function (s1, s2) {$/;"	f	lineno:110	type:boolean function(<undefined | Strength>, <undefined | Strength>)
-weakestOf	deltablue.js	/^Strength.weakestOf = function (s1, s2) {$/;"	f	lineno:114	type:<undefined | Strength> function(<undefined | Strength>, <undefined | Strength>)
+prototype	deltablue.js	/^Constraint.prototype.addConstraint = function () {$/;"	v	lineno:160	namespace:BinaryConstraint.superConstructor	type:Constraint
+prototype	deltablue.js	/^Constraint.prototype.addConstraint = function () {$/;"	v	lineno:160	namespace:Constraint	type:Constraint
+prototype	deltablue.js	/^Constraint.prototype.addConstraint = function () {$/;"	v	lineno:160	namespace:Constraint.prototype.constructor	type:Constraint
+prototype	deltablue.js	/^Constraint.prototype.addConstraint = function () {$/;"	v	lineno:160	namespace:EditConstraint.superConstructor.superConstructor	type:Constraint
+prototype	deltablue.js	/^Constraint.prototype.addConstraint = function () {$/;"	v	lineno:160	namespace:EqualityConstraint.superConstructor.superConstructor	type:Constraint
+prototype	deltablue.js	/^Constraint.prototype.addConstraint = function () {$/;"	v	lineno:160	namespace:ScaleConstraint.superConstructor.superConstructor	type:Constraint
+prototype	deltablue.js	/^Constraint.prototype.addConstraint = function () {$/;"	v	lineno:160	namespace:StayConstraint.superConstructor.superConstructor	type:Constraint
+prototype	deltablue.js	/^Constraint.prototype.addConstraint = function () {$/;"	v	lineno:160	namespace:UnaryConstraint.superConstructor	type:Constraint
+prototype	deltablue.js	/^OrderedCollection.prototype.add = function (elm) {$/;"	v	lineno:60	namespace:OrderedCollection	type:OrderedCollection
+prototype	deltablue.js	/^OrderedCollection.prototype.add = function (elm) {$/;"	v	lineno:60	namespace:OrderedCollection.prototype.constructor	type:OrderedCollection
+prototype	deltablue.js	/^Plan.prototype.addConstraint = function (c) {$/;"	v	lineno:761	namespace:Plan	type:Plan
+prototype	deltablue.js	/^Plan.prototype.addConstraint = function (c) {$/;"	v	lineno:761	namespace:Plan.prototype.constructor	type:Plan
+prototype	deltablue.js	/^Planner.prototype.incrementalAdd = function (c) {$/;"	v	lineno:588	namespace:Planner	type:Planner
+prototype	deltablue.js	/^Planner.prototype.incrementalAdd = function (c) {$/;"	v	lineno:588	namespace:Planner.prototype.constructor	type:Planner
+prototype	deltablue.js	/^Strength.prototype.nextWeaker = function () {$/;"	v	lineno:122	namespace:Strength	type:Strength
+prototype	deltablue.js	/^Strength.prototype.nextWeaker = function () {$/;"	v	lineno:122	namespace:Strength.prototype.constructor	type:Strength
+prototype	deltablue.js	/^Variable.prototype.addConstraint = function (c) {$/;"	v	lineno:551	namespace:Variable	type:Variable
+prototype	deltablue.js	/^Variable.prototype.addConstraint = function (c) {$/;"	v	lineno:551	namespace:Variable.prototype.constructor	type:Variable
+prototype	deltablue.js	/^\/\/ Copyright 2008 Google Inc. All Rights Reserved.$/;"	v	lineno:1	namespace:BinaryConstraint	type:Constraint
+prototype	deltablue.js	/^\/\/ Copyright 2008 Google Inc. All Rights Reserved.$/;"	v	lineno:1	namespace:EditConstraint	type:Constraint
+prototype	deltablue.js	/^\/\/ Copyright 2008 Google Inc. All Rights Reserved.$/;"	v	lineno:1	namespace:EditConstraint.superConstructor	type:Constraint
+prototype	deltablue.js	/^\/\/ Copyright 2008 Google Inc. All Rights Reserved.$/;"	v	lineno:1	namespace:EqualityConstraint	type:Constraint
+prototype	deltablue.js	/^\/\/ Copyright 2008 Google Inc. All Rights Reserved.$/;"	v	lineno:1	namespace:EqualityConstraint.superConstructor	type:Constraint
+prototype	deltablue.js	/^\/\/ Copyright 2008 Google Inc. All Rights Reserved.$/;"	v	lineno:1	namespace:ScaleConstraint	type:Constraint
+prototype	deltablue.js	/^\/\/ Copyright 2008 Google Inc. All Rights Reserved.$/;"	v	lineno:1	namespace:ScaleConstraint.superConstructor	type:Constraint
+prototype	deltablue.js	/^\/\/ Copyright 2008 Google Inc. All Rights Reserved.$/;"	v	lineno:1	namespace:StayConstraint	type:Constraint
+prototype	deltablue.js	/^\/\/ Copyright 2008 Google Inc. All Rights Reserved.$/;"	v	lineno:1	namespace:StayConstraint.superConstructor	type:Constraint
+prototype	deltablue.js	/^\/\/ Copyright 2008 Google Inc. All Rights Reserved.$/;"	v	lineno:1	namespace:UnaryConstraint	type:Constraint
+recalculate	deltablue.js	/^ScaleConstraint.prototype.recalculate = function () {$/;"	f	lineno:500	namespace:BinaryConstraint.prototype	type:void function()
+recalculate	deltablue.js	/^ScaleConstraint.prototype.recalculate = function () {$/;"	f	lineno:500	namespace:EditConstraint.prototype	type:void function()
+recalculate	deltablue.js	/^ScaleConstraint.prototype.recalculate = function () {$/;"	f	lineno:500	namespace:EditConstraint.superConstructor.prototype	type:void function()
+recalculate	deltablue.js	/^ScaleConstraint.prototype.recalculate = function () {$/;"	f	lineno:500	namespace:EqualityConstraint.prototype	type:void function()
+recalculate	deltablue.js	/^ScaleConstraint.prototype.recalculate = function () {$/;"	f	lineno:500	namespace:EqualityConstraint.superConstructor.prototype	type:void function()
+recalculate	deltablue.js	/^ScaleConstraint.prototype.recalculate = function () {$/;"	f	lineno:500	namespace:ScaleConstraint.prototype	type:void function()
+recalculate	deltablue.js	/^ScaleConstraint.prototype.recalculate = function () {$/;"	f	lineno:500	namespace:ScaleConstraint.superConstructor.prototype	type:void function()
+recalculate	deltablue.js	/^ScaleConstraint.prototype.recalculate = function () {$/;"	f	lineno:500	namespace:StayConstraint.prototype	type:void function()
+recalculate	deltablue.js	/^ScaleConstraint.prototype.recalculate = function () {$/;"	f	lineno:500	namespace:StayConstraint.superConstructor.prototype	type:void function()
+recalculate	deltablue.js	/^ScaleConstraint.prototype.recalculate = function () {$/;"	f	lineno:500	namespace:UnaryConstraint.prototype	type:void function()
+remove	deltablue.js	/^OrderedCollection.prototype.remove = function (elm) {$/;"	f	lineno:76	namespace:OrderedCollection.prototype	type:void function(<undefined | null | Variable | Constraint>)
+removeConstraint	deltablue.js	/^Variable.prototype.removeConstraint = function (c) {$/;"	f	lineno:558	namespace:Variable.prototype	type:void function(<undefined | null | Variable | Constraint>)
+removeFirst	deltablue.js	/^OrderedCollection.prototype.removeFirst = function () {$/;"	f	lineno:72	namespace:OrderedCollection.prototype	type:<undefined | null | Variable | Constraint> function()
+removeFromGraph	deltablue.js	/^ScaleConstraint.prototype.removeFromGraph = function () {$/;"	f	lineno:473	namespace:BinaryConstraint.prototype	type:void function()
+removeFromGraph	deltablue.js	/^ScaleConstraint.prototype.removeFromGraph = function () {$/;"	f	lineno:473	namespace:EditConstraint.prototype	type:void function()
+removeFromGraph	deltablue.js	/^ScaleConstraint.prototype.removeFromGraph = function () {$/;"	f	lineno:473	namespace:EditConstraint.superConstructor.prototype	type:void function()
+removeFromGraph	deltablue.js	/^ScaleConstraint.prototype.removeFromGraph = function () {$/;"	f	lineno:473	namespace:EqualityConstraint.prototype	type:void function()
+removeFromGraph	deltablue.js	/^ScaleConstraint.prototype.removeFromGraph = function () {$/;"	f	lineno:473	namespace:EqualityConstraint.superConstructor.prototype	type:void function()
+removeFromGraph	deltablue.js	/^ScaleConstraint.prototype.removeFromGraph = function () {$/;"	f	lineno:473	namespace:ScaleConstraint.prototype	type:void function()
+removeFromGraph	deltablue.js	/^ScaleConstraint.prototype.removeFromGraph = function () {$/;"	f	lineno:473	namespace:ScaleConstraint.superConstructor.prototype	type:void function()
+removeFromGraph	deltablue.js	/^ScaleConstraint.prototype.removeFromGraph = function () {$/;"	f	lineno:473	namespace:StayConstraint.prototype	type:void function()
+removeFromGraph	deltablue.js	/^ScaleConstraint.prototype.removeFromGraph = function () {$/;"	f	lineno:473	namespace:StayConstraint.superConstructor.prototype	type:void function()
+removeFromGraph	deltablue.js	/^ScaleConstraint.prototype.removeFromGraph = function () {$/;"	f	lineno:473	namespace:UnaryConstraint.prototype	type:void function()
+removePropagateFrom	deltablue.js	/^Planner.prototype.removePropagateFrom = function (out) {$/;"	f	lineno:712	namespace:Planner.prototype	type:OrderedCollection function(<undefined | null | Variable>)
+satisfy	deltablue.js	/^Constraint.prototype.satisfy = function (mark) {$/;"	f	lineno:172	namespace:BinaryConstraint.superConstructor.prototype	type:<undefined | null | Variable | Constraint> function(number)
+satisfy	deltablue.js	/^Constraint.prototype.satisfy = function (mark) {$/;"	f	lineno:172	namespace:Constraint.prototype	type:<undefined | null | Variable | Constraint> function(number)
+satisfy	deltablue.js	/^Constraint.prototype.satisfy = function (mark) {$/;"	f	lineno:172	namespace:EditConstraint.superConstructor.superConstructor.prototype	type:<undefined | null | Variable | Constraint> function(number)
+satisfy	deltablue.js	/^Constraint.prototype.satisfy = function (mark) {$/;"	f	lineno:172	namespace:EqualityConstraint.superConstructor.superConstructor.prototype	type:<undefined | null | Variable | Constraint> function(number)
+satisfy	deltablue.js	/^Constraint.prototype.satisfy = function (mark) {$/;"	f	lineno:172	namespace:ScaleConstraint.superConstructor.superConstructor.prototype	type:<undefined | null | Variable | Constraint> function(number)
+satisfy	deltablue.js	/^Constraint.prototype.satisfy = function (mark) {$/;"	f	lineno:172	namespace:StayConstraint.superConstructor.superConstructor.prototype	type:<undefined | null | Variable | Constraint> function(number)
+satisfy	deltablue.js	/^Constraint.prototype.satisfy = function (mark) {$/;"	f	lineno:172	namespace:UnaryConstraint.superConstructor.prototype	type:<undefined | null | Variable | Constraint> function(number)
+size	deltablue.js	/^OrderedCollection.prototype.size = function () {$/;"	f	lineno:68	namespace:OrderedCollection.prototype	type:number function()
+size	deltablue.js	/^Plan.prototype.size = function () {$/;"	f	lineno:765	namespace:Plan.prototype	type:number function()
+strengthValue	deltablue.js	/^\/\/ Copyright 2008 Google Inc. All Rights Reserved.$/;"	v	lineno:1	namespace:Strength.NORMAL	type:number
+strengthValue	deltablue.js	/^\/\/ Copyright 2008 Google Inc. All Rights Reserved.$/;"	v	lineno:1	namespace:Strength.PREFERRED	type:number
+strengthValue	deltablue.js	/^\/\/ Copyright 2008 Google Inc. All Rights Reserved.$/;"	v	lineno:1	namespace:Strength.REQUIRED	type:number
+strengthValue	deltablue.js	/^\/\/ Copyright 2008 Google Inc. All Rights Reserved.$/;"	v	lineno:1	namespace:Strength.STONG_PREFERRED	type:number
+strengthValue	deltablue.js	/^\/\/ Copyright 2008 Google Inc. All Rights Reserved.$/;"	v	lineno:1	namespace:Strength.STRONG_DEFAULT	type:number
+strengthValue	deltablue.js	/^\/\/ Copyright 2008 Google Inc. All Rights Reserved.$/;"	v	lineno:1	namespace:Strength.WEAKEST	type:number
+strengthValue	deltablue.js	/^\/\/ Copyright 2008 Google Inc. All Rights Reserved.$/;"	v	lineno:1	namespace:Strength.WEAK_DEFAULT	type:number
+strengthValue	deltablue.js	/^\/\/ Copyright 2008 Google Inc. All Rights Reserved.$/;"	v	lineno:1	namespace:Strength.prototype.constructor.NORMAL	type:number
+strengthValue	deltablue.js	/^\/\/ Copyright 2008 Google Inc. All Rights Reserved.$/;"	v	lineno:1	namespace:Strength.prototype.constructor.PREFERRED	type:number
+strengthValue	deltablue.js	/^\/\/ Copyright 2008 Google Inc. All Rights Reserved.$/;"	v	lineno:1	namespace:Strength.prototype.constructor.REQUIRED	type:number
+strengthValue	deltablue.js	/^\/\/ Copyright 2008 Google Inc. All Rights Reserved.$/;"	v	lineno:1	namespace:Strength.prototype.constructor.STONG_PREFERRED	type:number
+strengthValue	deltablue.js	/^\/\/ Copyright 2008 Google Inc. All Rights Reserved.$/;"	v	lineno:1	namespace:Strength.prototype.constructor.STRONG_DEFAULT	type:number
+strengthValue	deltablue.js	/^\/\/ Copyright 2008 Google Inc. All Rights Reserved.$/;"	v	lineno:1	namespace:Strength.prototype.constructor.WEAKEST	type:number
+strengthValue	deltablue.js	/^\/\/ Copyright 2008 Google Inc. All Rights Reserved.$/;"	v	lineno:1	namespace:Strength.prototype.constructor.WEAK_DEFAULT	type:number
+stronger	deltablue.js	/^Strength.stronger = function (s1, s2) {$/;"	f	lineno:106	namespace:Strength	type:boolean function(<undefined | Strength>, <undefined | Strength>)
+stronger	deltablue.js	/^Strength.stronger = function (s1, s2) {$/;"	f	lineno:106	namespace:Strength.prototype.constructor	type:boolean function(<undefined | Strength>, <undefined | Strength>)
+strongest	deltablue.js	/^Strength.strongest = function (s1, s2) {$/;"	f	lineno:118	namespace:Strength	type:function
+strongest	deltablue.js	/^Strength.strongest = function (s1, s2) {$/;"	f	lineno:118	namespace:Strength.prototype.constructor	type:function
+superConstructor	deltablue.js	/^function BinaryConstraint(var1, var2, strength) {$/;"	f	lineno:341	namespace:EqualityConstraint	type:void function(<null | Variable>, <null | Variable>, Strength)
+superConstructor	deltablue.js	/^function BinaryConstraint(var1, var2, strength) {$/;"	f	lineno:341	namespace:ScaleConstraint	type:void function(<null | Variable>, <null | Variable>, Strength)
+superConstructor	deltablue.js	/^function Constraint(strength) {$/;"	f	lineno:153	namespace:BinaryConstraint	type:void function(Strength)
+superConstructor	deltablue.js	/^function Constraint(strength) {$/;"	f	lineno:153	namespace:EditConstraint.superConstructor	type:void function(Strength)
+superConstructor	deltablue.js	/^function Constraint(strength) {$/;"	f	lineno:153	namespace:EqualityConstraint.superConstructor	type:void function(Strength)
+superConstructor	deltablue.js	/^function Constraint(strength) {$/;"	f	lineno:153	namespace:ScaleConstraint.superConstructor	type:void function(Strength)
+superConstructor	deltablue.js	/^function Constraint(strength) {$/;"	f	lineno:153	namespace:StayConstraint.superConstructor	type:void function(Strength)
+superConstructor	deltablue.js	/^function Constraint(strength) {$/;"	f	lineno:153	namespace:UnaryConstraint	type:void function(Strength)
+superConstructor	deltablue.js	/^function UnaryConstraint(v, strength) {$/;"	f	lineno:212	namespace:EditConstraint	type:void function(<null | Variable>, Strength)
+superConstructor	deltablue.js	/^function UnaryConstraint(v, strength) {$/;"	f	lineno:212	namespace:StayConstraint	type:void function(<null | Variable>, Strength)
+weaker	deltablue.js	/^Strength.weaker = function (s1, s2) {$/;"	f	lineno:110	namespace:Strength	type:boolean function(<undefined | Strength>, <undefined | Strength>)
+weaker	deltablue.js	/^Strength.weaker = function (s1, s2) {$/;"	f	lineno:110	namespace:Strength.prototype.constructor	type:boolean function(<undefined | Strength>, <undefined | Strength>)
+weakestOf	deltablue.js	/^Strength.weakestOf = function (s1, s2) {$/;"	f	lineno:114	namespace:Strength	type:<undefined | Strength> function(<undefined | Strength>, <undefined | Strength>)
+weakestOf	deltablue.js	/^Strength.weakestOf = function (s1, s2) {$/;"	f	lineno:114	namespace:Strength.prototype.constructor	type:<undefined | Strength> function(<undefined | Strength>, <undefined | Strength>)
