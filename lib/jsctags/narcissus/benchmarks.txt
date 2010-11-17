@@ -26,9 +26,20 @@ check-string-fasta.js                   85       174            7        7      
 check-string-tagcloud.js                233      214            29       19          4.659      105
 check-string-unpack-code.js             60       214            40       28          5.095      110
 
+v8/v1
 crypto.js                               1650     528            15813    5667        14.315     970
 deltablue.js                            834      406            3974     1818        5.247      290
 earley-boyer.js                         4677     6699           17165    8668        27.793     1370
 raytrace.js                             3403     4256           309083   133528      18.625     38220
 raytrace-inlined.js                     3403     1923           1822     1422        10.872     590
 richards.js                             495      345            77       76          4.523      120
+
+v8/v6
+crypto.js                               1698     545            19751    6982        14.411     1170
+deltablue.js                            880      406            3974     1818        5.280      300
+earley-boyer.js                         4684     6667           16902    8536        19.817     1350
+raytrace.js                             904      1956           82663    33811       18.431     4190
+raytrace-inlined.js                     904      733            462      398         7.720      200
+regexp                                  1761     1826           122      121         9.464      360
+richards.js                             539      347            77       76          4.560      120
+splay                                   394      211            72       51          4.973      110
