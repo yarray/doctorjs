@@ -52,9 +52,10 @@ var Tags = ctags.Tags;
 function usage() {
     sys.puts("usage: jsctags [options] path0 [.. pathN]");
     sys.puts("options:");
+    sys.puts("    -f, --output file     place output in the given file");
     sys.puts("    -h, --help            display this usage info");
     sys.puts("    -j, --jsonp function  use JSONP with a function name");
-    sys.puts("    -o, --output file     place output in the given file");
+    sys.puts("    -o                    alternative for -f");
     sys.puts("    -L, --libroot dir     add a CommonJS module root (like " +
         "require.paths)")
     sys.puts("    -W, --warning level   set log level (debug/info/warn/" +
@@ -64,7 +65,7 @@ function usage() {
 
 var opts;
 try {
-    opts = getopt("help|h", "jsonp|j=s", "libroot|L=s@", "output|o=s",
+    opts = getopt("help|h", "jsonp|j=s", "libroot|L=s@", "output|o|f=s",
                   "warning|W=s");
 } catch (e) {
     sys.puts(e);
