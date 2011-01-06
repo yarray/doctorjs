@@ -203,16 +203,18 @@ for (var i = 0; i < pathCount; i++) {
     processPath(argv[i + 2]);
 }
 
-var outPath;
+var out;
 if (opts.hasOwnProperty('output')) {
-    outPath = opts.output;
+    if (opts.output === '-') {
+        out = process.stdout;
+    } else {
+        out = fs.createWriteStream(opts.output);
+    }
 } else if (opts.hasOwnProperty('jsonp')) {
-    outPath = "tags.jsonp";
+    out = fs.createWriteStream("tags.jsonp");
 } else {
-    outPath = "tags";
+    out = fs.createWriteStream("tags");
 }
-
-var out = fs.createWriteStream(outPath);
 
 if (opts.hasOwnProperty('jsonp')) {
     tags.writeJSONP(out, opts.jsonp);
