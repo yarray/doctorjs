@@ -52,7 +52,7 @@ var Tags = ctags.Tags;
 function usage() {
     sys.puts("usage: jsctags [options] path0 [.. pathN]");
     sys.puts("options:");
-    sys.puts("    -f, --output file     place output in the given file");
+    sys.puts("    -f, --output file     place output in the given file. value of \"-\" writes tags to stdout");
     sys.puts("    -h, --help            display this usage info");
     sys.puts("    -j, --jsonp function  use JSONP with a function name");
     sys.puts("    -o                    alternative for -f");
