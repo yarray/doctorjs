@@ -52,9 +52,10 @@ var Tags = ctags.Tags;
 function usage() {
     sys.puts("usage: jsctags [options] path0 [.. pathN]");
     sys.puts("options:");
+    sys.puts("    -f, --output file     place output in the given file. value of \"-\" writes tags to stdout");
     sys.puts("    -h, --help            display this usage info");
     sys.puts("    -j, --jsonp function  use JSONP with a function name");
-    sys.puts("    -o, --output file     place output in the given file");
+    sys.puts("    -o                    alternative for -f");
     sys.puts("    -L, --libroot dir     add a CommonJS module root (like " +
         "require.paths)")
     sys.puts("    -W, --warning level   set log level (debug/info/warn/" +
@@ -64,7 +65,7 @@ function usage() {
 
 var opts;
 try {
-    opts = getopt("help|h", "jsonp|j=s", "libroot|L=s@", "output|o=s",
+    opts = getopt("help|h", "jsonp|j=s", "libroot|L=s@", "output|o|f=s",
                   "warning|W=s");
 } catch (e) {
     sys.puts(e);
@@ -203,16 +204,18 @@ for (var i = 0; i < pathCount; i++) {
     processPath(argv[i + 2]);
 }
 
-var outPath;
+var out;
 if (opts.hasOwnProperty('output')) {
-    outPath = opts.output;
+    if (opts.output === '-') {
+        out = process.stdout;
+    } else {
+        out = fs.createWriteStream(opts.output);
+    }
 } else if (opts.hasOwnProperty('jsonp')) {
-    outPath = "tags.jsonp";
+    out = fs.createWriteStream("tags.jsonp");
 } else {
-    outPath = "tags";
+    out = fs.createWriteStream("tags");
 }
-
-var out = fs.createWriteStream(outPath);
 
 if (opts.hasOwnProperty('jsonp')) {
     tags.writeJSONP(out, opts.jsonp);
