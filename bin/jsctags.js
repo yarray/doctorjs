@@ -66,7 +66,7 @@ function usage() {
 var opts;
 try {
     opts = getopt("help|h", "jsonp|j=s", "libroot|L=s@", "output|o|f=s",
-                  "warning|W=s");
+                  "sort|=s", "warning|W=s");
 } catch (e) {
     sys.puts(e);
     usage();
@@ -220,7 +220,7 @@ if (opts.hasOwnProperty('output')) {
 if (opts.hasOwnProperty('jsonp')) {
     tags.writeJSONP(out, opts.jsonp);
 } else {
-    tags.write(out);
+    tags.write(out, opts);
 }
 
 out.end();
