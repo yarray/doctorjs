@@ -80,7 +80,7 @@ escape	earley-boyer.js	/^    var escape = function(res) {$/;"	f	lineno:2066	type
 false_term_nboyer	earley-boyer.js	/^var false_term_nboyer;$/;"	v	lineno:3450	type:<string | sc_Pair>
 forw	earley-boyer.js	/^                    forw = function(sc_states_67, BgL_sc_statezd2num_68zd2, sc_starters_69, sc_enders_70, sc_predictors_71, sc_steps_72, sc_nts_73) {$/;"	f	lineno:4109	type:void function(Array, number, Array, Array, Array, Array, Array)
 getNextChar	earley-boyer.js	/^sc_ErrorInputPort.prototype.getNextChar = function() {$/;"	f	lineno:2127	type:void function()
-getNextChar	earley-boyer.js	/^sc_StringInputPort.prototype.getNextChar = function() {$/;"	f	lineno:2145	type:<string | sc_EOF> function()
+getNextChar	earley-boyer.js	/^sc_StringInputPort.prototype.getNextChar = function() {$/;"	f	lineno:2145	type:sc_EOF function()
 if_constructor_nboyer	earley-boyer.js	/^var if_constructor_nboyer;$/;"	v	lineno:3444	type:<string | Array>
 ind	earley-boyer.js	/^            ind = function(nt, sc_nts_10) {$/;"	f	lineno:3830	type:<number | boolean> function(string, Array)
 isCharReady	earley-boyer.js	/^sc_ErrorInputPort.prototype.isCharReady = function() {$/;"	f	lineno:2130	type:boolean function()
@@ -257,7 +257,7 @@ sc_getStructField	earley-boyer.js	/^function sc_getStructField(s, name, field) {
 sc_getprop	earley-boyer.js	/^function sc_getprop(sym, key) {$/;"	f	lineno:110	type:boolean function(any, any)
 sc_greater	earley-boyer.js	/^function sc_greater(x, y) {$/;"	f	lineno:229	type:boolean function(any, any)
 sc_greaterEqual	earley-boyer.js	/^function sc_greaterEqual(x, y) {$/;"	f	lineno:255	type:boolean function(any, any)
-sc_hash	earley-boyer.js	/^function sc_hash(o) {$/;"	f	lineno:2017	type:<number | string | undefined> function(<number | string | boolean | undefined | null | Object | sc_Pair>)
+sc_hash	earley-boyer.js	/^function sc_hash(o) {$/;"	f	lineno:2017	type:<number | string | undefined> function(<number | string | boolean | undefined | null | sc_Pair | Object>)
 sc_hashtableContains	earley-boyer.js	/^function sc_hashtableContains(ht, key) {$/;"	f	lineno:2007	type:boolean function(any, any)
 sc_hashtableForEach	earley-boyer.js	/^function sc_hashtableForEach(ht, f) {$/;"	f	lineno:1997	type:void function(any, any)
 sc_hashtableGet	earley-boyer.js	/^function sc_hashtableGet(ht, key) {$/;"	f	lineno:1988	type:boolean function(any, any)
@@ -483,7 +483,7 @@ tautologyp_nboyer	earley-boyer.js	/^    tautologyp_nboyer = function(sc_x_11, tr
 tautologyp_nboyer	earley-boyer.js	/^var tautologyp_nboyer;$/;"	v	lineno:3443	type:boolean function(<string | null | sc_Pair>, <null | sc_Pair>, null)
 test	earley-boyer.js	/^    test = function(k) {$/;"	f	lineno:4612	type:number function(number)
 test	earley-boyer.js	/^var test;$/;"	v	lineno:3799	type:number function(number)
-toString	earley-boyer.js	/^sc_Char.prototype.toString = function() {$/;"	f	lineno:1161	type:any function()
+toString	earley-boyer.js	/^sc_Char.prototype.toString = function() {$/;"	f	lineno:1161	type:void function()
 toString	earley-boyer.js	/^sc_Hashtable.prototype.toString = function() {$/;"	f	lineno:1964	type:string function()
 toString	earley-boyer.js	/^sc_Pair.prototype.toString = function() {$/;"	f	lineno:535	type:string function()
 trans_of_implies1_nboyer	earley-boyer.js	/^    trans_of_implies1_nboyer = function(n) {$/;"	f	lineno:3676	type:<null | sc_Pair> function(number)

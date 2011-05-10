@@ -81,7 +81,7 @@ bnTestBit	crypto.js	/^function bnTestBit(n) {$/;"	f	lineno:904	type:boolean func
 bnToByteArray	crypto.js	/^function bnToByteArray() {$/;"	f	lineno:776	type:Array[number] function()
 bnToString	crypto.js	/^function bnToString(b) {$/;"	f	lineno:243	type:string function(number)
 bnXor	crypto.js	/^function bnXor(a) { var r = nbi(); this.bitwiseTo(a,op_xor,r); return r; }$/;"	f	lineno:836	type:BigInteger function(any)
-bnpAddTo	crypto.js	/^function bnpAddTo(a,r) {$/;"	f	lineno:928	type:void function(<null | Object | BigInteger>, BigInteger)
+bnpAddTo	crypto.js	/^function bnpAddTo(a,r) {$/;"	f	lineno:928	type:void function(<null | BigInteger | Object>, BigInteger)
 bnpBitwiseTo	crypto.js	/^function bnpBitwiseTo(a,op,r) {$/;"	f	lineno:806	type:void function(BigInteger, number function(number, number), BigInteger)
 bnpChangeBit	crypto.js	/^function bnpChangeBit(n,op) {$/;"	f	lineno:912	type:BigInteger function(any, any)
 bnpChunkSize	crypto.js	/^function bnpChunkSize(r) { return Math.floor(Math.LN2*BI_DB\/Math.log(r)); }$/;"	f	lineno:697	type:number function(<number | undefined>)
