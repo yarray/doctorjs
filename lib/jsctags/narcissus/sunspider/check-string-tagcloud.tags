@@ -22,5 +22,5 @@ toJSONString	check-string-tagcloud.js	/^    Array.prototype.toJSONString = funct
 toJSONString	check-string-tagcloud.js	/^    Boolean.prototype.toJSONString = function () {$/;"	f	lineno:72	type:string function()
 toJSONString	check-string-tagcloud.js	/^    Date.prototype.toJSONString = function () {$/;"	f	lineno:77	type:string function()
 toJSONString	check-string-tagcloud.js	/^    Number.prototype.toJSONString = function () {$/;"	f	lineno:93	type:string function()
-toJSONString	check-string-tagcloud.js	/^    Object.prototype.toJSONString = function (w) {$/;"	f	lineno:99	type:string function(any)
+toJSONString	check-string-tagcloud.js	/^    Object.prototype.toJSONString = function (w) {$/;"	f	lineno:99	type:string function(undefined)
 walk	check-string-tagcloud.js	/^            function walk(k, v) {$/;"	f	lineno:180	type:number function(string, any)
