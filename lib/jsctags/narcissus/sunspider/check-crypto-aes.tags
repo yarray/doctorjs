@@ -33,4 +33,4 @@ encodeUTF8	check-crypto-aes.js	/^function encodeUTF8(str) {  \/\/ encode multi-b
 escCtrlChars	check-crypto-aes.js	/^function escCtrlChars(str) {  \/\/ escape control chars which might cause problems handling ciphertext$/;"	f	lineno:278	type:string function(string)
 password	check-crypto-aes.js	/^Arise, fair sun, and kill the envious moon,\\n\\$/;"	v	lineno:387	type:string
 plainText	check-crypto-aes.js	/^var plainText = "ROMEO: But, soft! what light through yonder window breaks?\\n\\$/;"	v	lineno:385	type:string
-unescCtrlChars	check-crypto-aes.js	/^function unescCtrlChars(str) {  \/\/ unescape potentially problematic control characters$/;"	f	lineno:282	type:string function(string)
+unescCtrlChars	check-crypto-aes.js	/^function unescCtrlChars(str) {  \/\/ unescape potentially problematic control characters$/;"	f	lineno:282	type:string function(<string | undefined>)

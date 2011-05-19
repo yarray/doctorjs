@@ -4,7 +4,7 @@
 !_TAG_PROGRAM_NAME	jsctags	//
 !_TAG_PROGRAM_URL	http://github.com/pcwalton/jsctags	/GitHub repository/
 !_TAG_PROGRAM_VERSION	0.1	//
-%anonymous_function	splay.js	/^    this.root_.traverse_(function(node) { result.push(node.key); });$/;"	f	lineno:272	type:void function(<null | Node>)
+%anonymous_function	splay.js	/^    this.root_.traverse_(function(node) { result.push(node.key); });$/;"	f	lineno:272	type:void function(Node)
 GenerateKey	splay.js	/^function GenerateKey() {$/;"	f	lineno:59	type:number function()
 GeneratePayloadTree	splay.js	/^function GeneratePayloadTree(depth, tag) {$/;"	f	lineno:44	type:Object function(number, string)
 InsertNewNode	splay.js	/^function InsertNewNode() {$/;"	f	lineno:66	type:number function()
@@ -25,4 +25,4 @@ kSplayTreeSize	splay.js	/^var kSplayTreeSize = 8000;$/;"	v	lineno:37	type:number
 remove	splay.js	/^SplayTree.prototype.remove = function(key) {$/;"	f	lineno:188	type:<null | Node> function(number)
 splayTree	splay.js	/^var splayTree = null;$/;"	v	lineno:41	type:<null | SplayTree>
 splay_	splay.js	/^SplayTree.prototype.splay_ = function(key) {$/;"	f	lineno:288	type:void function(number)
-traverse_	splay.js	/^SplayTree.Node.prototype.traverse_ = function(f) {$/;"	f	lineno:381	type:void function(void function(<null | Node>))
+traverse_	splay.js	/^SplayTree.Node.prototype.traverse_ = function(f) {$/;"	f	lineno:381	type:void function(void function(Node))
