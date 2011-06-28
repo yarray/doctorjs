@@ -56,16 +56,18 @@ function usage() {
     sys.puts("    -h, --help            display this usage info");
     sys.puts("    -j, --jsonp function  use JSONP with a function name");
     sys.puts("    -o                    alternative for -f");
+    sys.puts("    --oneprog pass several JS files that comprise a single " + 
+             "program");
     sys.puts("    -L, --libroot dir     add a CommonJS module root (like " +
-        "require.paths)")
+             "require.paths)")
     sys.puts("    -W, --warning level   set log level (debug/info/warn/" +
-        "error, default error)");
+             "error, default error)");
     process.exit(1);
 }
 
 var opts;
 try {
-    opts = getopt("help|h", "jsonp|j=s", "libroot|L=s@", "output|o|f=s",
+    opts = getopt("help|h", "jsonp|j=s", "libroot|L=s@", "oneprog", "output|o|f=s",
                   "sort|=s", "warning|W=s");
 } catch (e) {
     sys.puts(e);
@@ -198,10 +200,55 @@ function processPath(p) {
     }
 }
 
-for (var i = 0; i < pathCount; i++) {
+if (opts.oneprog)
+  processMany();
+else
+  for (var i = 0; i < pathCount; i++) {
     //processPath(argv[i + 2], false, "", "");
     //dimvar: processPath seems to use its first arg only
     processPath(argv[i + 2]);
+  }
+
+function processMany() {
+  var i, fileinfo = new Array(pathCount), f, linecount = 0, l, data,
+  readf = fs.readFileSync, pcm1 = pathCount - 1;
+
+  for (i = 0; i <= pcm1; i++) {
+    f = argv[i + 2];
+    data = readf(argv[i + 2], "utf8");
+    if (data.charAt(data.length - 1) === "\n")
+      l = data.split("\n").length - 1;
+    else
+      l = data.split("\n").length;
+    fileinfo[i] = {path: f, lines: l, start: linecount + 1, end: linecount + l};
+    linecount += l;
+  }
+
+  for (data = "", i = pcm1; i >= 0; i--)
+    data = readf(argv[i + 2], "utf8") + data;
+  // the decision to pass argv[2] here is arbitrary
+  tags.scan(data, argv[2], getModuleInfo(argv[2]));
+
+  function getFileInfo(ln) {
+    var i = 0, f, s = 0, e = pcm1, floor = Math.floor;
+    while (true) {
+      i = floor((s + e) / 2);
+      f = fileinfo[i];
+      if (ln < f.start)
+        e = i;
+      else if (ln >= f.start && ln <= f.end)
+        return {tagfile: f.path, lineno: ln - f.start + 1};
+      else
+        s = i + 1;
+    }
+  }
+
+  for (l = tags.tags.length, i = 0; i < l; i++) {
+    var t= tags.tags[i];
+    var fi = getFileInfo(t.lineno);
+    t.tagfile = fi.tagfile;
+    t.lineno = fi.lineno.toString();
+  }
 }
 
 var out;
