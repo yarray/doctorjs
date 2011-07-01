@@ -218,14 +218,16 @@ function processMany() {
     data = readf(argv[i + 2], "utf8");
     if (data.charAt(data.length - 1) === "\n")
       l = data.split("\n").length - 1;
-    else
+    else {
       l = data.split("\n").length;
-    fileinfo[i] = {path: f, lines: l, start: linecount + 1, end: linecount + l};
+      data += "\n";
+    }
+    fileinfo[i] = {path: f, lines: l, data: data,
+                   start: linecount + 1, end: linecount + l};
     linecount += l;
   }
 
-  for (data = "", i = pcm1; i >= 0; i--)
-    data = readf(argv[i + 2], "utf8") + data;
+  for (data = "", i = pcm1; i >= 0; --i) data = fileinfo[i].data + data;
   // the decision to pass argv[2] here is arbitrary
   tags.scan(data, argv[2], getModuleInfo(argv[2]));
 
