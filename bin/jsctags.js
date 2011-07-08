@@ -52,12 +52,12 @@ var Tags = ctags.Tags;
 function usage() {
     sys.puts("usage: jsctags [options] path0 [.. pathN]");
     sys.puts("options:");
-    sys.puts("    -f, --output file     place output in the given file. value of \"-\" writes tags to stdout");
+    sys.puts("    -f, --output file     place output in the given file (-f " +
+             "- for stdout)");
     sys.puts("    -h, --help            display this usage info");
     sys.puts("    -j, --jsonp function  use JSONP with a function name");
-    sys.puts("    -o                    alternative for -f");
-    sys.puts("    --oneprog pass several JS files that comprise a single " + 
-             "program");
+    sys.puts("    -o, --output file     synonym for -f");
+    sys.puts("        --oneprog         combine all inputs into one program");
     sys.puts("    -L, --libroot dir     add a CommonJS module root (like " +
              "require.paths)")
     sys.puts("    -W, --warning level   set log level (debug/info/warn/" +
