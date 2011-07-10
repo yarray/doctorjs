@@ -46,8 +46,8 @@ require.paths.unshift(path.join(libdir, "jsctags"));
 
 var sys = require('sys');
 var _ = require('underscore')._;
-var getTags = require('narcissus/jscfa').getTags;
-var parse = require('narcissus/jsparse').parse;
+var getTags = require('../lib/cfa2/jscfa').getTags;
+var parse = require('../narcissus/lib/parser').parse;
 
 var stdin = process.openStdin();
 

@@ -50,8 +50,6 @@ function parse() {
         var jsdefs = require('narcissus:jsdefs');
         var tokenIds = jsdefs.tokenIds;
 
-        var cfa2 = require('narcissus').cfa2;
-        
         var astToJSON = function(ast) {
             var desc;
             if (ast.type in jsdefs.tokens) {
@@ -108,12 +106,6 @@ function parse() {
         };
 
         var ast = parse($('#js').val(), 'js', 1);
-        // myast = ast;
-        //var ast = fixAst(parse($('#js').val(), 'js', 1));
-        //var ast = labelAst(fixAst(parse($('#js').val(), 'js', 1)));
-        //var ast = tagVarRefsAst(labelAst(fixAst(parse($('#js').val(),'js',1))));
-        //cfa2(ast);
-        //console.log("adfafasf");
 
         $('#tree').tree({
             data: {
