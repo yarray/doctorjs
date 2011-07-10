@@ -57,7 +57,7 @@ The directory structure mostly follows the CommonJS packaging scheme:
 * `js/`: support files for the HTML demos
 * `lib/`: CommonJS-compliant library files
 * `lib/ctags/`: the core jsctags code
-* `lib/narcissus/`: the Narcissus engine
+* `narcissus/`: the Narcissus engine
 * `test/`: test cases for the indexer
 
 [1]: http://en.wikipedia.org/wiki/Ctags
