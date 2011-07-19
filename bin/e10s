@@ -1,0 +1,28 @@
+#!/bin/sh
+
+ROOT=`dirname $0`/..
+ROOT=`(cd $ROOT && pwd)`
+
+ARG=$1
+ARG=`(cd $ARG && pwd)`
+
+HERE=`pwd`
+
+E10S=$ROOT/lib/e10s
+
+ALLJS=$HERE/all.js
+COORDS=$HERE/coords.json
+
+cd $E10S
+
+SNARF='function snarfAbs(s) { return snarf(s) }'
+DEPS="-f ./sax/DefaultHandlers.js -f ./sax/sax.js -f ./xul.js -f ./manifest.js -f ./smoosh.js"
+
+$NJS_SHELL -e "$SNARF" $DEPS -e "Smoosh.smoosh('$ARG')" > $ALLJS
+
+$NJS_SHELL -e "$SNARF" $DEPS -e "Smoosh.coords('$ARG')" > $COORDS
+
+cd $HERE
+
+cd $ROOT/lib/cfa2
+./evtclassify.js $ALLJS && mv ./evts $HERE/
