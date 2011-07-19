@@ -1,15 +1,160 @@
 #!/bin/sh
 
+# ***** BEGIN LICENSE BLOCK *****
+# Version: MPL 1.1/GPL 2.0/LGPL 2.1
+#
+# The contents of this file are subject to the Mozilla Public License Version
+# 1.1 (the "License"); you may not use this file except in compliance with
+# the License. You may obtain a copy of the License at
+# http://www.mozilla.org/MPL/
+#
+# Software distributed under the License is distributed on an 'AS IS' basis,
+# WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+# for the specific language governing rights and limitations under the
+# License.
+#
+# The Original Code is DoctorJS.
+#
+# The Initial Developer of the Original Code is
+# Dave Herman <dherman@mozilla.com>
+# Portions created by the Initial Developer are Copyright (C) 2010
+# the Initial Developer. All Rights Reserved.
+#
+# Contributor(s):
+#   Dave Herman <dherman@mozilla.com>
+#
+# Alternatively, the contents of this file may be used under the terms of
+# either the GNU General Public License Version 2 or later (the "GPL"), or
+# the GNU Lesser General Public License Version 2.1 or later (the "LGPL"),
+# in which case the provisions of the GPL or the LGPL are applicable instead
+# of those above. If you wish to allow use of your version of this file only
+# under the terms of either the GPL or the LGPL, and not to allow others to
+# use your version of this file under the terms of the MPL, indicate your
+# decision by deleting the provisions above and replace them with the notice
+# and other provisions required by the GPL or the LGPL. If you do not delete
+# the provisions above, a recipient may use your version of this file under
+# the terms of any one of the MPL, the GPL or the LGPL.
+#
+# ***** END LICENSE BLOCK *****
+
+# Modify this to your own SpiderMonkey path if necessary.
+SPIDERMONKEY_SHELL=js
+
+# Modified from:
+# http://www.dbforums.com/unix-shell-scripts/1619154-how-unzip-files-recursively.html
+
+runjar()
+{
+  local jar_file=$1
+  local rm_flag=$2
+
+  local jar_dir
+  local jar_list
+  local new_jar_file
+  local new_unjar_sts
+
+  #
+  # Verify thar jar file exists
+  #
+
+  if [[ ! -e ${jar_file} ]]
+  then
+    echo "$0 - JAR file not found : ${jar_file}" >&2
+    return 1
+  fi
+
+  #
+  # Create unjar directory
+  #
+
+  jar_dir=$PWD/$(basename ${jar_file}).unjar
+  if [ ! -d ${jar_dir} ]
+  then
+    if ! mkdir ${jar_dir}
+    then
+      echo "$0 - Failed to create directory : ${jar_dir}"
+      return 1
+    fi
+  fi
+
+  #
+  # Unjar in unjar directory
+  #
+
+  if ! unzip -qq -o ${jar_file} -d ${jar_dir}
+  then
+    echo "$0 - Unzip error for file : $PWD/${jar_file}"
+    return 1
+  fi
+
+  #
+  # Get list of new jar files
+  #
+
+  new_jar_list=${jar_dir}/.new_jar_list
+  find ${jar_dir} -type f -name '*.jar' -print > ${new_jar_list}
+
+  #
+  # Recursive unzip of new jar files
+  #
+
+  unjar_sts=0
+  cd ${jar_dir}
+  while read new_jar_file
+  do
+    if ! runjar ${new_jar_file} remove_jar
+    then
+      unjar_sts=$?
+      break
+    fi
+  done < ${new_jar_list}
+  rm -f ${new_jar_list}
+  cd ..
+
+  #
+  # Remove jar file if required
+  #
+
+  if [ -n "${rm_flag}" -a ${unjar_sts} -eq 0 ]
+  then
+    if ! rm ${jar_file}
+    then
+      echo "$0 - Failed to delete file : $PWD/${jar_file}"
+    fi
+    if ! mv ${jar_dir} ${jar_file}
+    then
+      echo "$0 - Failed to rename unpacked jar dir : $PWD/${jar_dir}"
+    fi
+  fi
+
+  return 0
+}
+
 ROOT=`dirname $0`/..
 ROOT=`(cd $ROOT && pwd)`
 
-ARG=$1
-ARG=`(cd $ARG && pwd)`
-
 HERE=`pwd`
+
+XPI_FILE=$1
+XPI_DIRNAME=$(dirname ${XPI_FILE})
+XPI_BASENAME=$(basename ${XPI_FILE})
+RESULT_DIR=$(basename ${XPI_FILE} .xpi)
+
+cd ${XPI_DIRNAME}
+if [[ ! -e $RESULT_DIR ]]
+then
+  echo "Unpacking XPI..." >&2
+  runjar ${XPI_FILE}
+  mv ${XPI_FILE}.unjar ${RESULT_DIR}
+fi
+
+ABS_RESULT_DIR=`(cd $RESULT_DIR && pwd)`
+
+cd $HERE
 
 E10S=$ROOT/lib/e10s
 
+# FIXME: maybe these should go in the parent directory of the XPI as well
 ALLJS=$HERE/all.js
 COORDS=$HERE/coords.json
 
@@ -18,11 +163,17 @@ cd $E10S
 SNARF='function snarfAbs(s) { return snarf(s) }'
 DEPS="-f ./sax/DefaultHandlers.js -f ./sax/sax.js -f ./xul.js -f ./manifest.js -f ./smoosh.js"
 
-$NJS_SHELL -e "$SNARF" $DEPS -e "Smoosh.smoosh('$ARG')" > $ALLJS
+echo "Extracting JavaScript..." >&2
 
-$NJS_SHELL -e "$SNARF" $DEPS -e "Smoosh.coords('$ARG')" > $COORDS
+${SPIDERMONKEY_SHELL} -e "$SNARF" $DEPS -e "Smoosh.smoosh('${ABS_RESULT_DIR}')" > $ALLJS
+
+echo "Generating source coordinate maps..." >&2
+
+${SPIDERMONKEY_SHELL} -e "$SNARF" $DEPS -e "Smoosh.coords('${ABS_RESULT_DIR}')" > $COORDS
 
 cd $HERE
+
+echo "Analyzing source..." >&2
 
 cd $ROOT/lib/cfa2
 ./evtclassify.js $ALLJS && mv ./evts $HERE/
