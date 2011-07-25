@@ -152,6 +152,32 @@ ABS_RESULT_DIR=`(cd $RESULT_DIR && pwd)`
 
 cd $HERE
 
+
+
+cd ${ABS_RESULT_DIR}
+
+path_array()
+{
+  local FILES
+  local i
+  local FILE
+
+  unset FILES i
+  while IFS= read -r -d $'\0' FILE; do
+    FILES[i++]='"'"$FILE"'"'
+  done < <(find . -name "$1" -print0)
+
+  IFS=","
+  echo "[${FILES[*]}]"
+
+  return 0
+}
+
+JS_ARRAY=$(path_array '*.js')
+JSM_ARRAY=$(path_array '*.jsm')
+XUL_ARRAY=$(path_array '*.xul')
+
+
 E10S=$ROOT/lib/e10s
 
 # FIXME: maybe these should go in the parent directory of the XPI as well
@@ -160,16 +186,9 @@ COORDS=$HERE/coords.json
 
 cd $E10S
 
-SNARF='function snarfAbs(s) { return snarf(s) }'
-DEPS="-f ./sax/DefaultHandlers.js -f ./sax/sax.js -f ./xul.js -f ./manifest.js -f ./smoosh.js"
-
 echo "Extracting JavaScript..." >&2
 
-${SPIDERMONKEY_SHELL} -e "$SNARF" $DEPS -e "Smoosh.smoosh('${ABS_RESULT_DIR}')" > $ALLJS
-
-echo "Generating source coordinate maps..." >&2
-
-${SPIDERMONKEY_SHELL} -e "$SNARF" $DEPS -e "Smoosh.coords('${ABS_RESULT_DIR}')" > $COORDS
+./concat.js "${ABS_RESULT_DIR}" "${JS_ARRAY}" "${JSM_ARRAY}" "${XUL_ARRAY}" $ALLJS $COORDS
 
 cd $HERE
 
