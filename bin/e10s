@@ -180,9 +180,8 @@ XUL_ARRAY=$(path_array '*.xul')
 
 E10S=$ROOT/lib/e10s
 
-# FIXME: maybe these should go in the parent directory of the XPI as well
-ALLJS=$HERE/all.js
-COORDS=$HERE/coords.json
+ALLJS=${XPI_DIRNAME}/all.js
+COORDS=${XPI_DIRNAME}/coords.json
 
 cd $E10S
 
@@ -195,4 +194,4 @@ cd $HERE
 echo "Analyzing source..." >&2
 
 cd $ROOT/lib/cfa2
-./evtclassify.js $ALLJS && mv ./evts $HERE/
+./evtclassify.js $ALLJS && mv ./evts ${XPI_DIRNAME}/
