@@ -215,4 +215,4 @@ cd $ROOT/lib/cfa2
   echo timeout > ${XPI_DIRNAME}/result
 ) 2> /dev/null &
 
-exec ./evtclassify.js $ALLJS && mv ./evts ${XPI_DIRNAME}/ && echo done > ${XPI_DIRNAME}/result
+exec ./evtclassify.js $ALLJS ${XPI_DIRNAME}
