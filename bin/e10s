@@ -212,7 +212,7 @@ cd $ROOT/lib/cfa2
   # Wait a sec, then set blasters to kill.
   sleep 1
   kill -s SIGKILL $$
-  echo "terminated process $$" > ${XPI_DIRNAME}/terminated
+  echo timeout > ${XPI_DIRNAME}/result
 ) 2> /dev/null &
 
-./evtclassify.js $ALLJS && mv ./evts ${XPI_DIRNAME}/
+exec ./evtclassify.js $ALLJS && mv ./evts ${XPI_DIRNAME}/ && echo done > ${XPI_DIRNAME}/result
