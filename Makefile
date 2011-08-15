@@ -1,6 +1,7 @@
 PREFIX=/usr/local
 INSTALL=install
 NODE=node
+PROFILE=~/.profile
 
 BIN_SRC=$(addprefix bin/,jsctags.js)
 LIB_SRC=$(addprefix lib/jsctags/,getopt.js log.js paperboy.js traits.js \
@@ -25,10 +26,15 @@ install:
 	$(INSTALL) -d $(PREFIX)/narcissus
 	$(INSTALL) -d $(PREFIX)/narcissus/lib
 	$(INSTALL) $(LIB_NARCISSUS_SRC) $(PREFIX)/narcissus/lib
+	echo "export NODE_PATH=$(PREFIX)/lib/jsctags/:\$$NODE_PATH" >> $(PROFILE)
 
 uninstall:
 	rm -rf $(BIN_SRC:%.js=$(PREFIX)/%) $(PREFIX)/lib/jsctags \
 	  $(PREFIX)/lib/cfa2 $(PREFIX)/narcissus
+	cp $(PROFILE) $(PROFILE).bak
+	sed -e "s,^export NODE_PATH=$(PREFIX)/lib/jsctags/:\$$NODE_PATH$$,,g" \
+	  < $(PROFILE) > $(PROFILE)-tmp
+	mv $(PROFILE)-tmp $(PROFILE)
 
 serve:
 	$(NODE) serve.js
