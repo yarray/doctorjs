@@ -27,6 +27,9 @@ install:
 	$(INSTALL) -d $(PREFIX)/narcissus/lib
 	$(INSTALL) $(LIB_NARCISSUS_SRC) $(PREFIX)/narcissus/lib
 	echo "export NODE_PATH=$(PREFIX)/lib/jsctags/:\$$NODE_PATH" >> $(PROFILE)
+	@echo "\nIf you want to use jsctags right here, right now,\n\
+	please type this in your terminal:\n\n\
+	    . $(PROFILE)\n"
 
 uninstall:
 	rm -rf $(BIN_SRC:%.js=$(PREFIX)/%) $(PREFIX)/lib/jsctags \
