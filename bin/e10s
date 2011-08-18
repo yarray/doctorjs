@@ -167,7 +167,7 @@ path_array()
   unset FILES i
   while IFS= read -r -d $'\0' FILE; do
     FILES[i++]='"'"$FILE"'"'
-  done < <(find . -name "$1" -print0)
+  done < <(find . -path '*/__MACOSX/*' -prune -o -name "$1" -print0)
 
   IFS=","
   echo "[${FILES[*]}]"
@@ -179,6 +179,7 @@ JS_ARRAY=$(path_array '*.js')
 JSM_ARRAY=$(path_array '*.jsm')
 XUL_ARRAY=$(path_array '*.xul')
 
+echo "JS_ARRAY: ${JS_ARRAY}"
 
 E10S=$ROOT/lib/e10s
 
