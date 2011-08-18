@@ -179,8 +179,6 @@ JS_ARRAY=$(path_array '*.js')
 JSM_ARRAY=$(path_array '*.jsm')
 XUL_ARRAY=$(path_array '*.xul')
 
-echo "JS_ARRAY: ${JS_ARRAY}"
-
 E10S=$ROOT/lib/e10s
 
 ALLJS=${XPI_DIRNAME}/all.js
