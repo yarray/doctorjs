@@ -136,8 +136,10 @@ ROOT=`(cd $ROOT && pwd)`
 HERE=`pwd`
 
 XPI_FILE=$1
-XPI_DIRNAME=$(dirname ${XPI_FILE})
+XPI_DIRNAME=$(cd $(dirname ${XPI_FILE}) && pwd)
 XPI_BASENAME=$(basename ${XPI_FILE})
+XPI_FILE=${XPI_DIRNAME}/${XPI_BASENAME}
+
 RESULT_DIR=$(basename ${XPI_FILE} .xpi)
 
 cd ${XPI_DIRNAME}
