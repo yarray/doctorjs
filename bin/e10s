@@ -182,13 +182,14 @@ XUL_ARRAY=$(path_array '*.xul')
 E10S=$ROOT/lib/e10s
 
 ALLJS=${XPI_DIRNAME}/all.js
+WRAPPEDJS=${XPI_DIRNAME}/wrapped.js
 COORDS=${XPI_DIRNAME}/coords.json
 
 cd $E10S
 
 echo "Extracting JavaScript..." >&2
 
-./concat.js "${ABS_RESULT_DIR}" "${JS_ARRAY}" "${JSM_ARRAY}" "${XUL_ARRAY}" $ALLJS $COORDS
+./concat.js "${ABS_RESULT_DIR}" "${JS_ARRAY}" "${JSM_ARRAY}" "${XUL_ARRAY}" $ALLJS $WRAPPEDJS $COORDS
 
 cd $HERE
 
