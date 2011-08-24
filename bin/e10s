@@ -193,6 +193,15 @@ echo "Extracting JavaScript..." >&2
 
 cd $HERE
 
+echo "Checking applicability of analysis..." >&2
+
+${SPIDERMONKEY_SHELL} -e "var source = snarf('${WRAPPEDJS}');" -f $E10S/bogosity.js > ${XPI_DIRNAME}/bogosity
+
+if fgrep -q '"bogus":true' ${XPI_DIRNAME}/bogosity ; then
+  echo unanalyzable > ${XPI_DIRNAME}/result
+  exit 0
+fi
+
 echo "Analyzing source..." >&2
 
 cd $ROOT/lib/cfa2
