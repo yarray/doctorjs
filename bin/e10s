@@ -195,7 +195,7 @@ cd $HERE
 
 echo "Checking for empty codebase..." >&2
 
-if [ -z $(cat $ALLJS) ]; then
+if [ \! -s $ALLJS ]; then
   echo empty > ${XPI_DIRNAME}/result
   exit 0
 fi
