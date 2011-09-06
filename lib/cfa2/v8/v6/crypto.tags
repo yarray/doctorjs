@@ -23,8 +23,8 @@ am4	crypto.js	/^function am4(i,x,w,j,c,n) {$/;"	f	lineno:119	type:number functio
 setupEngine	crypto.js	/^setupEngine = function(fn, bits) {$/;"	f	lineno:140	type:void function(number function(number, number, <undefined | null | BigInteger>, <number | undefined>, number, <number | undefined>), number)
 BI_RM	crypto.js	/^var BI_RM = "0123456789abcdefghijklmnopqrstuvwxyz";$/;"	v	lineno:156	type:string
 BI_RC	crypto.js	/^var BI_RC = new Array();$/;"	v	lineno:157	type:Array[number]
-vv	crypto.js	/^var rr,vv;$/;"	v	lineno:158	type:number
 rr	crypto.js	/^var rr,vv;$/;"	v	lineno:158	type:number
+vv	crypto.js	/^var rr,vv;$/;"	v	lineno:158	type:number
 int2char	crypto.js	/^function int2char(n) { return BI_RM.charAt(n); }$/;"	f	lineno:166	type:string function(number)
 intAt	crypto.js	/^function intAt(s,i) {$/;"	f	lineno:167	type:number function(<number | string | null | Array[number]>, <number | undefined>)
 bnpCopyTo	crypto.js	/^function bnpCopyTo(r) {$/;"	f	lineno:173	type:void function(<null | BigInteger>)
