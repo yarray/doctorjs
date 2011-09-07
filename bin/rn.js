@@ -44,7 +44,7 @@ var libdir = path.join(cwd, "..", "lib");
  
 require.paths.unshift(path.join(libdir, "jsctags"));
 
-var sys = require('sys');
+var util = require('util');
 var _ = require('underscore')._;
 var getTags = require('../lib/cfa2/jscfa').getTags;
 var parse = require('../narcissus/lib/parser').parse;
@@ -62,7 +62,7 @@ stdin.on("end", function() {
     lines = src.split("\n");
     ast = parse(src, "js", 1);
   } catch (e) {
-    sys.print(JSON.stringify({ error: e.message, stage: "parse" }));
+    util.print(JSON.stringify({ error: e.message, stage: "parse" }));
     process.exit();
   }
 
@@ -73,6 +73,6 @@ stdin.on("end", function() {
     json = { error: e.message, stage: "analysis" };
   }
 
-  sys.print(JSON.stringify(json));
+  util.print(JSON.stringify(json));
   process.exit();
 });

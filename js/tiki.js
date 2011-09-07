@@ -166,7 +166,7 @@ var DEBUG = function() {
 
 exports.debug = function() {
   var msg = Array.prototype.join.call(arguments, '');
-  require('sys').debug(msg);
+  require('util').debug(msg);
 };
 
 // ..........................................................

@@ -41,24 +41,24 @@ var path = require('path');
 
 var _ = require('underscore')._;
 var fs = require('fs');
-var sys = require('sys');
+var util = require('util');
 var ctags = require('ctags');
 var getopt = require('getopt').getopt;
 var log = require('log');
 var Tags = ctags.Tags;
 
 function usage() {
-    sys.puts("usage: jsctags [options] path0 [.. pathN]");
-    sys.puts("options:");
-    sys.puts("    -f, --output file     place output in the given file (-f " +
+    util.puts("usage: jsctags [options] path0 [.. pathN]");
+    util.puts("options:");
+    util.puts("    -f, --output file     place output in the given file (-f " +
              "- for stdout)");
-    sys.puts("    -h, --help            display this usage info");
-    sys.puts("    -j, --jsonp function  use JSONP with a function name");
-    sys.puts("    -o, --output file     synonym for -f");
-    sys.puts("        --oneprog         combine all inputs into one program");
-    sys.puts("    -L, --libroot dir     add a CommonJS module root (like " +
+    util.puts("    -h, --help            display this usage info");
+    util.puts("    -j, --jsonp function  use JSONP with a function name");
+    util.puts("    -o, --output file     synonym for -f");
+    util.puts("        --oneprog         combine all inputs into one program");
+    util.puts("    -L, --libroot dir     add a CommonJS module root (like " +
              "require.paths)")
-    sys.puts("    -W, --warning level   set log level (debug/info/warn/" +
+    util.puts("    -W, --warning level   set log level (debug/info/warn/" +
              "error, default error)");
     process.exit(1);
 }
@@ -68,7 +68,7 @@ try {
     opts = getopt("help|h", "jsonp|j=s", "libroot|L=s@", "oneprog", "output|o|f=s",
                   "sort|=s", "warning|W=s");
 } catch (e) {
-    sys.puts(e);
+    util.puts(e);
     usage();
 }
 
@@ -80,7 +80,7 @@ if (opts.help || pathCount === 0) {
 if (opts.warning) {
     var level = opts.warning.toUpperCase();
     if (!log.levels.hasOwnProperty(level)) {
-        sys.puts("no such logging level: \"" + opts.warning + "\"");
+        util.puts("no such logging level: \"" + opts.warning + "\"");
         usage();
     }
     log.level = log.levels[level];
@@ -189,9 +189,9 @@ function processPath(p) {
             tags.scan(data, p, getModuleInfo(p));
         } catch (e) {
             if ('lineNumber' in e) {
-                sys.puts("error:" + p + ":" + e.lineNumber + ": " + e);
+                util.puts("error:" + p + ":" + e.lineNumber + ": " + e);
             } else {
-                sys.puts(e.message);
+                util.puts(e.message);
                 throw e;
             }
         }

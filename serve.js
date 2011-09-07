@@ -38,7 +38,7 @@
 
 require.paths.unshift('./lib/jsctags');
 var http = require('http'), paperboy = require('paperboy');
-var sys = require('sys');
+var util = require('util');
 
 http.createServer(function(req, resp) {
 	paperboy.deliver(__dirname, req, resp).

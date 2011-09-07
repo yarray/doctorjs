@@ -44,20 +44,20 @@ var libdir = path.join(cwd, "..", "lib");
  
 require.paths.unshift(path.join(libdir, "jsctags"));
   
-var sys = require('sys');
+var util = require('util');
 var _ = require('underscore')._;
 var http = require('http');
 var url = require('url');
 var servetypes = require('servetypes');
 
 function usage(msg) {
-  sys.print("usage: " + path.basename(argv[1]) + " [options]\n");
-  sys.print("  -h/--help        Print usage information\n");
-  sys.print("  -s/--static      Directory containing static web content\n");
-  sys.print("  -n/--no-service  Disable the JSON service");
-  sys.print("  -p/--port        Server port to listen on\n");
+  util.print("usage: " + path.basename(argv[1]) + " [options]\n");
+  util.print("  -h/--help        Print usage information\n");
+  util.print("  -s/--static      Directory containing static web content\n");
+  util.print("  -n/--no-service  Disable the JSON service");
+  util.print("  -p/--port        Server port to listen on\n");
   if (msg) {
-    sys.print("\n" + msg + "\n");
+    util.print("\n" + msg + "\n");
     process.exit(1);
   }
 
@@ -152,7 +152,7 @@ function makeSiteHandler(dir, service) {
     var fs = require('fs');
     fs.stat(file, function(err, stats) {
       if (!stats || !stats.isFile()) {
-        sys.debug("404: " + file);
+        util.debug("404: " + file);
         resp.writeHead(404, "Not Found", { 'Content-type': 'text/plain' });
         resp.end("404 Not Found");
         return;
@@ -189,13 +189,13 @@ parseOpts(argv.slice(2), function(err, opts) {
 
   var handler;
   if (opts.dir) {
-    sys.log("staging site from " + opts.dir);
+    util.log("staging site from " + opts.dir);
     handler = makeSiteHandler(opts.dir, opts.service);
   } else {
-    sys.log("running JSON service only");
+    util.log("running JSON service only");
     handler = service;
   }
 
-  sys.log("listening on port " + opts.port + "...");
+  util.log("listening on port " + opts.port + "...");
   http.createServer(handler).listen(opts.port, "127.0.0.1");
 });
