@@ -250,4 +250,4 @@ cd $ROOT/lib/cfa2
   echo timeout > ${XPI_DIRNAME}/result
 ) 2> /dev/null &
 
-exec ./evtclassify.js $ALLJS $COORDS ${XPI_BASENAME} ${XPI_DIRNAME}
+env time -f "%E" -o ./elapsed ./evtclassify.js $ALLJS $COORDS ${XPI_BASENAME} ${XPI_DIRNAME}
