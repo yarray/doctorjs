@@ -4,6 +4,6 @@ var tags = require('lib/jsctags/ctags').Tags,
 tags = new tags();
 
 fs.readFile('./example.js', 'utf-8', function (e, data) {
-  tags.scan(data, __dirname + '/example.js', {commonJS: false});
+  tags.scan(data, __dirname + '/example.js', {commonJS: true});
   console.log(tags);
 });
