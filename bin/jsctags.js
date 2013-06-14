@@ -38,15 +38,13 @@
 
 var argv = process.argv;
 var path = require('path');
-require.paths.unshift(path.join(path.dirname(argv[1]), "..", "lib",
-    "jsctags"));
 
-var _ = require('underscore')._;
+var _ = require('../lib/jsctags/underscore')._;
 var fs = require('fs');
 var sys = require('sys');
-var ctags = require('ctags');
-var getopt = require('getopt').getopt;
-var log = require('log');
+var ctags = require('../lib/jsctags/ctags');
+var getopt = require('../lib/jsctags/getopt').getopt;
+var log = require('../lib/jsctags/log');
 var Tags = ctags.Tags;
 
 function usage() {
@@ -223,5 +221,7 @@ if (opts.hasOwnProperty('jsonp')) {
     tags.write(out);
 }
 
-out.end();
+if (out != process.stdout) {
+    out.end();
+}
 
